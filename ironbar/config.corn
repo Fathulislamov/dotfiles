@@ -1,0 +1,164 @@
+
+let {
+    $workspaces = {
+        type = "workspaces"
+        all_monitors = false
+       // name_map = {
+       //     1 = "ﭮ"
+       //     2 = "icon:firefox"
+       //     3 = ""
+       //     Games = "icon:steam"
+       //     Code = ""
+       // }
+    }
+
+    $focused = { type = "focused" }
+
+    $launcher = {
+        type = "launcher"
+        favorites = ["firefox" "discord" "steam"]
+        show_names = false
+        show_icons = true
+    }
+
+    $mpris = {
+        type = "music"
+        player_type = "mpris"
+
+        on_click_middle = "playerctl play-pause"
+        on_scroll_up = "playerctl volume +5"
+        on_scroll_down = "playerctl volume -5"
+
+    }
+
+    $mpd_local = { type = "music" player_type = "mpd" music_dir = "/home/jake/Music" truncate.mode = "end" truncate.max_length = 100 }
+    $mpd_server = { type = "music" player_type = "mpd" host = "chloe:6600" truncate = "end" }
+
+    $sys_info = {
+        type = "sys_info"
+        interval.memory = 30
+        interval.cpu = 1
+        interval.temps = 5
+        interval.disks = 300
+        interval.networks = 3
+        format = [
+            "  {cpu_percent}% | {temp_c:coretemp-Package-id-0}°C"
+         // "   {memory_used} / {memory_total} GB ({memory_percent}%)"
+            "   {memory_percent}% | {swap_percent}%"
+          //  "| {swap_used} / {swap_total} GB ({swap_percent}%)"
+          //" {disk_used:/} / {disk_total:/} GB ({disk_percent:/}%)"
+            "󰓅   {net_down:wlp60s0} | {net_up:wlp60s0}"
+          //"猪 {load_average:1} | {load_average:5} | {load_average:15}"
+          //" {uptime}"
+        ]
+    }
+
+    $tray = { type = "tray" }
+
+    $clock = { type = "clock"
+								format = "%R"
+		}
+
+    $battery = {
+        type = "script"
+				name = "battery"
+				class = "battery"
+				mode = "watch"
+  			interval = 3000
+  			cmd = "~/.config/ironbar/battery_status.sh"
+    //    cmd = "/home/jake/bin/phone-battery"
+
+     //   show_if.cmd = "/home/jake/bin/phone-connected"
+      //  show_if.interval = 500
+    }
+    $wifi = {
+        type = "script"
+				mode = "watch"
+  			interval = 3000
+  			cmd = "~/.config/ironbar/net_status.sh"
+    //    cmd = "/home/jake/bin/phone-battery"
+
+     //   show_if.cmd = "/home/jake/bin/phone-connected"
+      //  show_if.interval = 500
+    }
+
+    $backlight = {
+        type = "label"
+  			interval = 1000
+  			label = "{{ ~/.config/ironbar/backlight_status.sh}}"
+    }
+
+    $language_old = {
+        type = "label"
+  			interval = 500
+  			label = " {{ ~/.config/ironbar/current_language.sh}}"
+    }
+    $language = {
+        type = "script"
+				mode = "watch"
+  			interval = 1000
+  			cmd = "~/.config/ironbar/current_language.sh"
+    }
+
+    $volume = {
+        type = "label"
+  			interval = 1000
+  			label = " {{ ~/.config/ironbar/volume.sh}}"
+    }
+    $clipboard = { type = "clipboard" icon_size=40	 max_items = 10 truncate.mode = "end" truncate.length = 50 }
+
+    $label = { type = "label" label = "random num: {{500:echo $RANDOM}}" }
+
+    // -- begin custom --
+    $button = { type = "button" name="power-btn" label = "" on_click = "popup:toggle" }
+
+    $popup = {
+        type = "box"
+        orientation = "vertical"
+        widgets = [
+            { type = "label" name = "header" label = "Power menu" }
+            {
+                type = "box"
+                widgets = [
+                    //{ type = "button" class="power-btn" label = "<span font-size='40pt'></span>" on_click = "!shutdown now" }
+                    //{ type = "button" class="power-btn" label = "<span font-size='40pt'></span>" on_click = "!reboot" }
+                    { type = "button" class="power-btn" label = "" on_click = "!shutdown now" }
+                    { type = "button" class="power-btn" label = "" on_click = "!reboot" }
+                ]
+            }
+            { type = "label" name = "uptime" class="power-uptime" label = "Uptime: {{30000:uptime -p | cut -d ' ' -f2-}}" }
+       ] 
+    }
+    $power_menu = {
+        type = "custom"
+        class = "power-menu"
+
+        bar = [ $button ]
+        popup = [ $popup ]
+
+        tooltip = "Up: {{30000:uptime -p | cut -d ' ' -f2-}}"
+    }
+		$upower = {
+			type = "upower"
+      format = "{percentage}%"
+			icon_size=15
+		}
+    // -- end custom --
+
+    //$left = [ $workspaces $launcher $label ]
+    $left = [ $workspaces ]
+    $center = [ $clock]
+    //$right = [ $mpd_local $mpd_server $phone_battery $sys_info $clipboard $power_menu $clock ]
+    $right = [ $sys_info $wifi $volume $clipboard $tray $battery $backlight $language $power_menu ]
+}
+in {
+    anchor_to_edges = true
+    position = "top"
+		height=20
+    icon_theme = "Paper"
+
+    start = $left
+		center = $center
+	  end = $right
+
+}
