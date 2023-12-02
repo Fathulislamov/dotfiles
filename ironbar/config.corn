@@ -29,6 +29,7 @@ let {
         on_scroll_up = "playerctl volume +5"
         on_scroll_down = "playerctl volume -5"
 
+
     }
 
     $mpd_local = { type = "music" player_type = "mpd" music_dir = "/home/jake/Music" truncate.mode = "end" truncate.max_length = 100 }
@@ -41,7 +42,7 @@ let {
         interval.temps = 5
         interval.disks = 300
         interval.networks = 3
-        format = [
+        format = [ 
             "  {cpu_percent}% | {temp_c:coretemp-Package-id-0}°C"
          // "   {memory_used} / {memory_total} GB ({memory_percent}%)"
             "   {memory_percent}% | {swap_percent}%"
@@ -103,7 +104,7 @@ let {
     $volume = {
         type = "label"
   			interval = 1000
-  			label = " {{ ~/.config/ironbar/volume.sh}}"
+  			label = "  {{ ~/.config/ironbar/volume.sh}}"
     }
     $clipboard = { type = "clipboard" icon_size=40	 max_items = 10 truncate.mode = "end" truncate.length = 50 }
 

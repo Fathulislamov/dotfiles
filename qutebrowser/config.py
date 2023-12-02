@@ -1510,7 +1510,7 @@ c.bindings.key_mappings = {
 ## Enable Opera-like mouse rocker gestures. This disables the context
 ## menu.
 ## Type: Bool
-# c.input.mouse.rocker_gestures = False
+c.input.mouse.rocker_gestures = True
 
 ## Timeout (in milliseconds) for partially typed key bindings. If the
 ## current input forms only partial matches, the keystring will be
@@ -2143,7 +2143,7 @@ c.window.hide_decoration = True
 # config.bind('<Alt-8>', 'tab-focus 8')
 # config.bind('<Alt-9>', 'tab-focus -1')
 # config.bind('<Alt-m>', 'tab-mute')
-config.bind('<Alt-t>', ':spawn --userscript translate')
+config.bind('<Alt-t>', ':spawn --userscript translate -t ru')
 # config.bind('<Ctrl-A>', 'navigate increment')
 # config.bind('<Ctrl-Alt-p>', 'print')
 # config.bind('<Ctrl-B>', 'scroll-page 0 -1')
