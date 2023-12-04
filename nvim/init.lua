@@ -38,3 +38,10 @@ require('plugin-cmp')        -- Autocompletion
 require('plugin-pantran')    -- Hydra
 require('plugin-telescope')  -- Fuzzy finder
 
+cmd [[                           
+augroup kitty_padding_color
+    autocmd!
+    au VimEnter * :silent !kitty @ set-colors background=\#1E1E1E
+    au VimLeave * :silent !kitty @ set-colors background=\#000000
+augroup END
+]]

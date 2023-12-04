@@ -2,9 +2,11 @@
 	color: white;
 }
 
-$background: #121212;
+$background: rgba(18, 18, 18, 0.7);
+//$background: #121212;
 $foreground: #A9B1D6;
 
+$textcolor: #BEC7DB;
 $black: #24283B;
 $gray: #565F89;
 $red: #F7768E;
@@ -17,8 +19,10 @@ $white: $foreground;
 
 .bar{
 	margin-top: 20px;
+  //background-color: $background;
   background-color: $background;
-	border-radius: 10px;
+	//border-radius: 8px;
+	//opacity: 0.5;
 }
 .left{
 	padding-top: 0.4rem;
@@ -32,13 +36,13 @@ $white: $foreground;
 }
 .workspace {
 	font-size: 0.8rem;
-	color: #BEC7DB;
+	color: $textcolor;
 }
 .time-btn{
 	padding-bottom: 5px;
 	.time-label{
 		font-size: 0.95rem;
-		color: #BEC7DB;
+		color: $textcolor;
 	}
 	&:hover {
 //	background-color: red;
@@ -68,13 +72,12 @@ $white: $foreground;
 			border-radius: 20px;
       padding: 0.5rem;
       .cal {
-				color: #BEC7DB;
+				color: $textcolor;
         padding: 0.3rem 0.2rem;
         &.highlight {
-					color: #EBCB8B;
+					color: $textcolor;
         }
         &.view {
-				color: red;
 				border: none;
   			background-color:  $background;
 				margin-top: 10px;
@@ -94,17 +97,17 @@ $white: $foreground;
   }
 }
 .circular {
-	background-color: $background;
+	background-color: transparent;
 	//background-color: black;
-	color: #BEC7DB;
+	color: $textcolor;
 	.circular-button{
 		all: unset;
 	}
 	.circular-text{
-		padding: 0.4rem;
-		font-size: 12px;	
-		color: #BEC7DB;
-		background-color: $background;
+		padding: 0.45rem;
+		font-size: 11px;	
+		color: $textcolor;
+		background-color: transparent;
 	}
 }
 
@@ -117,7 +120,7 @@ $white: $foreground;
 
 .wifi-icon{
 	all: unset;
-	color: #BEC7DB;
+	color: $textcolor;
 	background-color: $background;
 	font-size: 13px;
 }
@@ -125,16 +128,18 @@ $white: $foreground;
 .button-bar {
 	all: unset
 }
-.button-power{
-	all: unset;
-	background-color: $background;
-	color: black;
+.batbar .battery-text{
+	padding-top: 7px;
 }
 
 .powermenu{
 	padding: 20px;
 	background-color: $background;
 	border-radius: 15px;
+	.button-power{
+		all: unset;
+		padding: 3px;
+	}
 }
 .window-power{
 	margin-right: 20px;
@@ -145,15 +150,14 @@ $white: $foreground;
 
 scale {
 	min-width: 8rem;
-			color: red;
 	padding: 0 10px;
 	trough {
- 		background-color: #BEC7DB;
+ 		background-color: $textcolor;
  		border-radius: 5px;
  		min-height: 8px;
  		min-width: 10px;
 		 highlight {
-  		background-color: #BEC7DB;
+  		background-color: $textcolor;
   		border-radius: 5px;
 		}
 	}

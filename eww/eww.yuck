@@ -6,8 +6,10 @@
   :stacking "fg"
 	:exclusive true
   :geometry (
-		geometry :x "0%"
-    :y "0%"
+		geometry 
+		:x "0%"
+    :y "0"
+;    :width "1495px"
     :width "100%"
     :height "25px"
     :anchor "top center"
@@ -166,15 +168,18 @@
 	(powermenu)
 )
 (defwidget powermenu []
+
 	(eventbox
 		:onhoverlost "eww close powermenu" 
 		:duration "550ms"
+		:class "powermenu-widget"
  		(box 
 			:orientation "v" 
 			:space-evenly true
 			:class "powermenu" 
 			:halign "start" 
 			:spacing 20
+			:width "100%"
    		(button  :halign "start" :class "button-power shutdown" :onclick "systemctl poweroff" "  Shutdown")
   		(button  :halign "start" :class "button-power reboot" :onclick "systemctl reboot" "󰑓  Reboot")
  ;  		(button  :class "lock" :onrightclick "bsplock" "")
@@ -209,7 +214,7 @@
 			:value {EWW_RAM.used_mem_perc}
 			:start-at 75
       :class "circular membar"
-      :thickness 3
+      :thickness 2
       (button 
         :class "button-bar circular-button"
         :tooltip "Using ${round(EWW_RAM.used_mem_perc,0)} % RAM"
@@ -232,7 +237,7 @@
 			:value {EWW_CPU.avg}
 			:start-at 75
       :class "circular cpubar"
-      :thickness 3
+      :thickness 2
       (button 
         :class "button-bar circular-button"
         :tooltip "Using ${round(EWW_CPU.avg,0)} % CPU"
@@ -256,7 +261,7 @@
 			:value {replace(EWW_TEMPS, 'NaN', "null")["CORETEMP_PACKAGE_ID_0"]}
 			:start-at 75
       :class "circular temp-bar"
-      :thickness 3
+      :thickness 2
       (button 
         :class "button-bar circular-button"
         :tooltip "Temperature CPU ${replace(EWW_TEMPS, 'NaN', "null")["CORETEMP_PACKAGE_ID_0"]}°C"
@@ -281,10 +286,10 @@
 			:value {EWW_BATTERY.BAT0["capacity"]}
 			:start-at 75
       :class "circular batbar"
-      :thickness 3
+      :thickness 2
 			:clockwise false
       (button 
-        :class "circular-button"
+        :class "circular-button "
         :limit-width 2
         :tooltip "Battery power  ${EWW_BATTERY.BAT0["capacity"]} %"
  ;     :onclick "$HOME/.config/eww/bar/scripts/pop system"
@@ -294,7 +299,7 @@
 				(label 
 					;:text "${EWW_BATTERY.BAT0["status"] != "Charging" ? "󰁹": "󰂄"}"
 					:text "${EWW_BATTERY.BAT0["status"] != "Charging" ? "󰁹": ""}"
-					:class "circular-text"
+					:class "circular-text battery-text"
 				)
 			)
 		)
@@ -328,7 +333,7 @@
 				:value current-brightness
 				:start-at 75
      		:class "circular"
-      	:thickness 3
+      	:thickness 2
 				:clockwise true
 				(button   
 					:onclick "scripts/popup audio"   
@@ -373,7 +378,7 @@
 				:value current-volume
 				:start-at 75
      		:class "circular"
-      	:thickness 3
+      	:thickness 2
 				:clockwise true
 				(button   
 					;:onclick "scripts/popup audio"   
