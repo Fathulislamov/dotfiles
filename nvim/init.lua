@@ -9,10 +9,12 @@ set.smarttab = true           -- Tab width setting
 set.expandtab = false         -- Tab width setting
 set.swapfile = false          -- Disable swap file creation
 set.termguicolors = true      -- Sets 256 colors
---set.scrolloff = 8							-- Scroll offset
-set.fillchars = { eob = ' ' } -- Hide ~set.showtabline = 0
+set.scrolloff = 8							-- Scroll offset
+set.fillchars = { eob = ' ' } -- Hide ~
 set.mouse = ''                -- Disable mouse
---set.fillchars = { eob = ' ' }
+set.showtabline=0               -- Hide bufferline
+
+
 cmd 'syntax on'               -- Enable syntax highlighting
 cmd 'syntax enable'           -- Enable syntax highlighting
 cmd 'set signcolumn=no'
@@ -45,3 +47,4 @@ augroup kitty_padding_color
     au VimLeave * :silent !kitty @ set-colors background=\#000000
 augroup END
 ]]
+

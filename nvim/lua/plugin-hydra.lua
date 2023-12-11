@@ -3,40 +3,48 @@ local Hydra = require('hydra')
 Hydra({
 	name = 'SIDE SCROOL',
 	mode = 'n',
-	body = 'z',
+	body = '<Leader>zs',
 	config = {
 		--	foreign_keys = 'warn',
 		--	exit = false,
-		color = "red",
+		color = "pink",
 		--		hint = false,
 	},
 	heads = {
 		{ 'h', '5zh' },
 		{ 'l', '5zl', { desc = '←/→' } },
-		{ 'l', '5zl' },
-		{ 'H', 'zH' },
-		{ 'L', 'zL', { desc = 'half screen ←/→' } },
-		{ 'L', 'zL' },
 	}
 })
---[[
+
 Hydra({
-	name = 'CURSOR MOVE',
+	name = 'RESIZE',
 	mode = 'n',
-	body = 'z',
+	body = '<Leader>zr',
 	config = {
---		foreign_keys = nil,
---		exit = true,
 		color = "pink",
---[[		hint = {
---			type = 'window'
-		},
 	},
 	heads = {
-		{ 'j', '<C-w>j' },
-		{ 'k', '<C-w>k' },
-		{ 'h', '<C-w>h' },
-		{ 'l', '<C-w>l' },
+		{ 'l', ':vertical resize +5<CR>' },
+		{ 'h', ':vertical resize -5<CR>' },
 	}
 })
---]]
+
+local which_key = require("which-key")
+local keymap = {
+	["<Leader>"] = {
+		z = {
+			name = 'Hydra',
+			s = {
+				name = 'Horisontal scroll',
+				h = 'Scroll left',
+				l = 'Scroll right',
+			},
+			r = {
+				name = 'Resize window',
+				h = 'Resize window left',
+				l = 'Resize window right',
+			}
+		}
+	}
+}
+which_key.register(keymap)

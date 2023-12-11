@@ -23,9 +23,12 @@ cmp.setup({
 		completion = cmp.config.window.bordered(),
 		documentation = cmp.config.window.bordered(),
 	},
+
 	mapping = cmp.mapping.preset.insert({
-		['<C-b>'] = cmp.mapping.scroll_docs(-4),
-		['<C-f>'] = cmp.mapping.scroll_docs(4),
+		--['<C-b>'] = cmp.mapping.scroll_docs(-4),
+		--['<C-f>'] = cmp.mapping.scroll_docs(4),
+		['<S-k>'] = cmp.mapping.scroll_docs(-4),
+		['<S-j>'] = cmp.mapping.scroll_docs(4),
 		['<C-Space>'] = cmp.mapping.complete(),
 		['<C-e>'] = cmp.mapping.abort(),
 		['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
@@ -54,14 +57,12 @@ cmp.setup({
 		end, { "i", "s" })
 	}),
 	sources = cmp.config.sources({
-		{ name = 'nvim_lsp' },
-		--    { name = 'vsnip' }, -- For vsnip users.
-		{ name = 'luasnip' }, -- For luasnip users.
-		-- { name = 'ultisnips' }, -- For ultisnips users.
-		-- { name = 'snippy' }, -- For snippy users.
-	}, {
-		{ name = 'buffer' },
-	}),
+			{ name = 'nvim_lsp' },
+			{ name = 'luasnip' }, -- For luasnip users.
+		},
+		{
+			{ name = 'buffer' },
+		}),
 	formatting = {
 		kind_icons = {
 			Text = "",
@@ -167,3 +168,21 @@ vim.api.nvim_set_hl(0, 'CmpItemKindMethod', { link = 'CmpItemKindFunction' })
 vim.api.nvim_set_hl(0, 'CmpItemKindKeyword', { bg = 'NONE', fg = '#D4D4D4' })
 vim.api.nvim_set_hl(0, 'CmpItemKindProperty', { link = 'CmpItemKindKeyword' })
 vim.api.nvim_set_hl(0, 'CmpItemKindUnit', { link = 'CmpItemKindKeyword' })
+
+
+local which_key = require("which-key")
+local keymap = {
+	["<Leader>"] = {
+		y = {
+			name = 'Autocompletion',
+			['<S-k>'] = 'Scroll docs down',
+			['<S-j>'] = 'Scroll docs up',
+			['<C-Space>'] = 'Activation',
+			['<C-e>'] = 'Abort',
+			['<CR>'] = 'Confirm',
+			["<Tab>"] = 'Select next item',
+			["<S-Tab>"] = 'Select prev item',
+		}
+	}
+}
+which_key.register(keymap)

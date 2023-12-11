@@ -40,8 +40,8 @@ require('lualine').setup {
 	options = {
 		theme = bubbles_theme,
 		component_separators = '|',
-		section_separators = { left = '', right = '' },
-		--		ignore_focus = { 'sfm' },
+	section_separators = { left = '', right = '' },
+		--	ignore_focus = { 'sfm' },
 		--		disabled_filetypes = { 'packer', 'NvimTree' },
 		globalstatus = true,
 		use_mode_colors = true,
@@ -94,17 +94,7 @@ require('lualine').setup {
 		},
 		lualine_b = {},
 		lualine_c = {},
-		lualine_x = {
-			{
-				'tabs',
-				separator = { left = '|', right = '|' },
-				tabs_color = {
-					inactive = { fg = colors.red, bg = colors.red },
-					active = { fg = colors.red, bg = colors.red },
-				}
-			},
-			'%=                '
-		},
+		lualine_x = {},
 		lualine_y = {},
 		lualine_z = {
 			{ 'location', separator = { right = '' }, left_padding = 2 },

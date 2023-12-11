@@ -60,7 +60,7 @@ $white: $foreground;
 
 // Calendar
 .background.calendar {
-  background-color: $background;
+  background-color: #121212;
 	border-radius: 15px;
 }
 .calendar-day-base{
@@ -79,7 +79,7 @@ $white: $foreground;
         }
         &.view {
 				border: none;
-  			background-color:  $background;
+  			background-color: #121212;
 				margin-top: 10px;
         }
         &:selected {

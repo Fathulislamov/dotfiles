@@ -12,14 +12,11 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	{ 'tomasiser/vim-code-dark' },                                    -- Colorscheme
-	{
-		'folke/noice.nvim',                                             -- Completely replaces the UI
-		event = "VeryLazy",
-		dependencies = { 'MunifTanjim/nui.nvim', 'rcarriga/nvim-notify' } -- Notification
-
-	},
-	{ 'dinhhuy258/sfm.nvim',              event = "VeryLazy", }, -- File explorer
+	{ 'tomasiser/vim-code-dark' },                              -- Colorscheme
+	{ 'folke/noice.nvim',                 event = "VeryLazy", }, -- Notification
+	{ 'MunifTanjim/nui.nvim', },                                -- Dependencies noice
+	{ 'rcarriga/nvim-notify' },                                 -- Dependencies noice
+	{ 'dinhhuy258/sfm.nvim',              event = "VeryLazy" }, -- File explorer
 	{ 'folke/which-key.nvim',             event = "VeryLazy" }, -- Keyboard shortcut hint
 	{ 'kyazdani42/nvim-web-devicons',     event = "VeryLazy" }, -- Icons
 	{ 'Pocco81/auto-save.nvim',           event = "VeryLazy" }, -- Auto save
@@ -27,17 +24,18 @@ require("lazy").setup({
 	{ 'nvim-lualine/lualine.nvim' },                            -- Status bar
 	{ 'akinsho/toggleterm.nvim',          event = "VeryLazy" }, -- Terminal
 	{ 'rcarriga/nvim-notify',             event = "VeryLazy" }, -- Notification	
-	{ "potamides/pantran.nvim" },                               -- Translate
-	{ 'nvim-treesitter/nvim-treesitter',  build = ":TSUpdate" }, -- Highlighting ,
-	{ 'Frederick888/hydra.nvim',          branch = "self" },
+	{ "potamides/pantran.nvim",           event = "VeryLazy" }, -- Translate
+	{ 'nvim-treesitter/nvim-treesitter',  build = ":TSUpdate" }, -- Highlighting
+	{ 'Frederick888/hydra.nvim',          branch = "self" },    -- Custom mode
 	{ 'phaazon/hop.nvim', },                                    -- Motion
+	{ 'nvim-telescope/telescope.nvim',    branch = '0.1.x', },  -- Fuzzy finder
+	{ 'nvim-lua/plenary.nvim' },                                -- Dependencies telescope
 	-- LSP
 	{ 'neovim/nvim-lspconfig' },                                -- LSP config
 	{ 'williamboman/mason.nvim' },
 	{ 'williamboman/mason-lspconfig.nvim' },
-	{ 'kosayoda/nvim-lightbulb' },
 	-- Autocompletion
-	{ 'hrsh7th/nvim-cmp' },
+	{ 'hrsh7th/nvim-cmp' }, -- Autocompletion
 	{ 'hrsh7th/cmp-nvim-lsp' },
 	{ 'hrsh7th/cmp-cmdline' },
 	{ 'hrsh7th/cmp-buffer' },
@@ -45,10 +43,4 @@ require("lazy").setup({
 	{ 'L3MON4D3/LuaSnip' },
 	{ 'saadparwaiz1/cmp_luasnip' },
 	{ 'onsails/lspkind.nvim' },
-
-	{
-		'nvim-telescope/telescope.nvim',
-		branch = '0.1.x',
-		dependencies = { 'nvim-lua/plenary.nvim' }
-	}
 })
