@@ -1,8 +1,6 @@
 local cmd = vim.cmd           -- execute vim commands
 local set = vim.opt           -- global/buffer/windows-scoped options
 set.number = true             -- Enable line numbering
-
-set.wrap = false              -- Not transfer skin
 set.tabstop = 2               -- Tab width setting
 set.shiftwidth = 2            -- Tab width setting
 set.smarttab = true           -- Tab width setting
@@ -27,7 +25,7 @@ cmd 'colorscheme codedark'
 require('plugin-sfm')          -- File manager
 require('plugin-which-key')    -- Keyboard sheet
 require('plugin-auto-save')    -- Auto save
-require('plugin-hydra')        -- Hydra
+require('plugin-hydra')        -- hidra
 require('plugin-lualine')      -- Status bar
 require('plugin-neoscroll')    -- Smooth scroll
 require('plugin-toggleterm')   -- Terminal
@@ -39,10 +37,10 @@ require('plugin-mason')        -- Mason
 require('plugin-cmp')          -- Autocompletion
 require('plugin-pantran')      -- Hydra
 require('plugin-telescope')    -- Fuzzy finder
+require('plugin-comment')      -- Comment
 require 'colorizer'.setup()    -- Highlighting color
 require "confirm-quit".setup() -- Smart quit
 require("autoclose").setup()   -- Autopair
-require('Comment').setup()     -- Comment
 
 cmd [[
 augroup kitty_padding_color

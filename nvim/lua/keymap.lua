@@ -9,22 +9,22 @@ vim.keymap.set("n", "<leader>q", require "confirm-quit".confirm_quit)
 vim.keymap.set("n", "<leader>Q", require "confirm-quit".confirm_quit_all)
 
 local key = {
-	['<Leader>'] = {
-		l = { '<C-w>l<CR>', "Switch cursor right" },
-		h = { '<C-w>h<CR>', "Switch cursor left" },
-		j = { '<C-w>j<CR>', "Switch cursor down" },
-		k = { '<C-w>k<CR>', "Switch cursor up" },
-		n = { ':tabnew <CR>', "Open new tab" },
-		dd = { '"_d<CR>', "Delete" },
-		s = { '<Esc>:w<CR>', "Save" },
-		x = { '<Esc>:so ~/.config/nvim/init.lua<CR>', "Reaload config" },
-		q = { '<Esc>:ConfirmQuit<CR>', "Quit" },
-		Q = { '<Esc>:ConfirmQuitAll<CR>', "Quit all" },
-		c = { ':nohlsearch<CR>', "Clear the highlighting search" },
-		i = { '<C-w>R<CR>', "Move window left" },
-		o = { '<C-w>r<CR>', "Move window right" },
-	  w = { '<Esc>:tabprevious <CR>', "Tab previous" },
-		r = { '<Esc>:tabnext <CR>', "Tab next" },
+	['<leader>'] = {
+		l = { '<c-w>l<cr>', "switch cursor right" },
+		h = { '<c-w>h<cr>', "switch cursor left" },
+		j = { '<c-w>j<cr>', "switch cursor down" },
+		k = { '<c-w>k<cr>', "switch cursor up" },
+		n = { ':tabnew <cr>', "open new tab" },
+		dd = { '"_d<cr>', "delete" },
+		s = { '<esc>:w<cr>', "save" },
+		x = { '<esc>:so ~/.config/nvim/init.lua<cr>', "reaload config" },
+		q = { '<esc>:ConfirmQuit<cr>', "quit" },
+		Q = { '<esc>:ConfirmQuitAll<cr>', "quit all" },
+		c = { ':nohlsearch<cr>', "clear the highlighting search" },
+		i = { '<c-w>r<cr>', "move window left" },
+		o = { '<c-w>r<cr>', "move window right" },
+		w = { '<esc>:tabprevious <cr>', "tab previous" },
+		r = { '<esc>:tabnext <cr>', "tab next" },
 	}
 }
 which_key.register(key)

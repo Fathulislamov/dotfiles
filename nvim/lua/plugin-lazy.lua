@@ -30,7 +30,7 @@ require("lazy").setup({
 	{ 'phaazon/hop.nvim', },                                                      -- Motion
 	{ 'nvim-telescope/telescope.nvim',    branch = '0.1.x', },                    -- Fuzzy finder
 	{ 'nvim-lua/plenary.nvim' },                                                  -- Dependencies telescope
-	{ 'NvChad/nvim-colorizer.lua' },                                              -- Highlighting color
+	{ 'NvChad/nvim-colorizer.lua', },                                              -- Highlighting color
 	{ 'yutkat/confirm-quit.nvim',         event = "CmdlineEnter", opts = {} },    -- Smart quit
 	{ 'm4xshen/autoclose.nvim' },                                                 -- Autopair
 	{ 'numToStr/Comment.nvim',            opts = {},              lazy = false, }, -- Comment
