@@ -20,6 +20,7 @@ set ifs "\n"
 # leave some space at the top and the bottom of the screen
 set scrolloff 10
 
+
 # use enter for shell commands
 map <enter> shell
 
@@ -97,3 +98,18 @@ cmd zip ${{
     zip -r $1.zip $1
     rm -rf $1
 }}
+
+# preview 
+set previewer ~/.config/lf/lf_kitty_preview
+set cleaner ~/.config/lf/lf_kitty_clean
+
+# Icons
+set icons
+
+# Update
+set period 1
+
+# Border
+set drawbox
+
+map a push %mkdir<space>

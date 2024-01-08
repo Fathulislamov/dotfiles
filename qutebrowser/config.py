@@ -12,7 +12,7 @@
 
 ## This is here so configs done via the GUI are still loaded.
 ## Remove it to not load settings done via the GUI.
-config.load_autoconfig(False)
+#config.load_autoconfig(False)
 
 ## Aliases for commands. The keys of the given dictionary are the
 ## aliases, while the values are the commands they map to.
@@ -1510,7 +1510,7 @@ c.bindings.key_mappings = {
 ## Enable Opera-like mouse rocker gestures. This disables the context
 ## menu.
 ## Type: Bool
-c.input.mouse.rocker_gestures = True
+#c.input.mouse.rocker_gestures = True
 
 ## Timeout (in milliseconds) for partially typed key bindings. If the
 ## current input forms only partial matches, the keystring will be
@@ -2080,7 +2080,7 @@ c.url.start_pages = ['https://google.com']
 ## Hide the window decoration.  This setting requires a restart on
 ## Wayland.
 ## Type: Bool
-c.window.hide_decoration = False
+#c.window.hide_decoration = True 
 
 
 ## Format to use for the window title. The same placeholders like for
