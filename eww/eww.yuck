@@ -11,7 +11,7 @@
     :y "0"
 ;    :width "1495px"
     :width "100%"
-    :height "25px"
+    :height "30px"
     :anchor "top center"
 	)
 	(centerbox 
@@ -35,7 +35,7 @@
 (defwidget right []
 	(box	
 		:class "right"
-		:spacing 10
+		:spacing 15
 		:orientation "h" 
 		:space-evenly "false" 
 		:halign "end" 
@@ -398,6 +398,7 @@
 
 (defwidget language[] 
 	(label 
+		:class "language"
 		:text "${current-language}"
 	)
 )

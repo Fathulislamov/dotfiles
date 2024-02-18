@@ -1,5 +1,6 @@
 *{
 	color: white;
+	font-size: 20px;
 }
 
 $background: rgba(18, 18, 18, 0.7);
@@ -35,13 +36,14 @@ $white: $foreground;
 	padding: 0 10px 0 0;
 }
 .workspace {
-	font-size: 0.8rem;
+	font-size: 18px;
+	padding: 4px;
 	color: $textcolor;
 }
 .time-btn{
 	padding-bottom: 5px;
 	.time-label{
-		font-size: 0.95rem;
+		font-size:19px;
 		color: $textcolor;
 	}
 	&:hover {
@@ -104,32 +106,34 @@ $white: $foreground;
 		all: unset;
 	}
 	.circular-text{
-		padding: 0.45rem;
-		font-size: 11px;	
+		padding: 7px;
 		color: $textcolor;
 		background-color: transparent;
 	}
 }
 
 .circular-button .cpu-icon{
-	font-size: 11px;
+		padding: 10px;
+	font-size: 18px;
 }
 .circular-button .mem-icon{
-	font-size: 10px;
+		padding: 10px;
+	font-size: 17px;
 }
 
 .wifi-icon{
 	all: unset;
 	color: $textcolor;
 	background-color: $background;
-	font-size: 13px;
 }
 
 .button-bar {
-	all: unset
+	all: unset;
+	margin-right: 20px;
 }
 .batbar .battery-text{
 	padding-top: 7px;
+	font-size: 16px;
 }
 
 .powermenu{
@@ -142,7 +146,7 @@ $white: $foreground;
 	}
 }
 .window-power{
-	margin-right: 20px;
+	margin-right: 200px;
 }
 .brightness-icon{
 	color: white;
