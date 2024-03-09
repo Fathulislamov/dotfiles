@@ -35,12 +35,19 @@ local bubbles_theme = {
 	},
 }
 
+local function lsp()
+	if require 'lsp-status'.status() ~= '' then
+--		return "lsp working"
+		return '󰈖'
+	end
+	return "󰩋"
+end
 
 require('lualine').setup {
 	options = {
 		theme = bubbles_theme,
 		component_separators = '|',
-	section_separators = { left = '', right = '' },
+		section_separators = { left = '', right = '' },
 		--	ignore_focus = { 'sfm' },
 		--		disabled_filetypes = { 'packer', 'NvimTree' },
 		globalstatus = true,
@@ -68,8 +75,7 @@ require('lualine').setup {
 			},
 		},
 		lualine_b = { 'filename', 'branch', },
-		lualine_c = { hydra.is_active, hydra.get_color
-		},
+		lualine_c = { lsp },
 		lualine_x = {
 			{
 				'tabs',
@@ -83,7 +89,7 @@ require('lualine').setup {
 			},
 			'%=                '
 		},
-		lualine_y = { 'filetype', 'progress' },
+		lualine_y = { 'filetype', { require 'lsp-status'.status() }, 'progress' },
 		lualine_z = {
 			{ 'location', separator = { right = '' }, left_padding = 2 },
 		},

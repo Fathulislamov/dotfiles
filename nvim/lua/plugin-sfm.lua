@@ -29,13 +29,22 @@ local default_config = {
 				action = "split",
 			},
 			{
-				key = "x",
+			key = "x",
 				action = "close_entry",
 			},
 			{
 				key = "<Esc>",
 				action = "close",
 			},
+			{
+				key = "r",
+				action = "move",
+			},
+			{
+				key = '<Space>',
+				action = "",
+			},
+
 		}
 	},
 	renderer = {

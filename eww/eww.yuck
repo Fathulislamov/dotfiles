@@ -195,7 +195,7 @@
 		:tooltip "${wifi-name == '' ? 'disconnected' : wifi-name}"
 		(button
    		 ;:onclick "Kitty nmtui"
-   		 :onclick "kitty  --hold"
+   		 :onclick "kitty nmtui &"
 			 :class "button-bar wifi-icon" wifi-icon
 		)
 	)
@@ -216,12 +216,12 @@
       :class "circular membar"
       :thickness 2
       (button 
-        :class "button-bar circular-button"
+        :class "circular-button"
         :tooltip "Using ${round(EWW_RAM.used_mem_perc,0)} % RAM"
-        :onclick "kitty"
+        :onclick "kitty vtop &" 
 				(label 
 					:text ""
-					:class "circular-text mem-icon"
+					:class "circular-text text-mem"
 				)
 			)
 		)
@@ -239,13 +239,14 @@
       :class "circular cpubar"
       :thickness 2
       (button 
-        :class "button-bar circular-button"
+        :class "circular-button"
         :tooltip "Using ${round(EWW_CPU.avg,0)} % CPU"
  ;     :onclick "$HOME/.config/eww/bar/scripts/pop system"
+        :onclick "kitty vtop &" 
 				(label 
 					;:text "C"
 					:text ""
-					:class "circular-text cpu-icon"
+					:class "circular-text text-cpu"
 				)
 			)
 		)
@@ -258,17 +259,17 @@
 		:vexpand "false" 
 		:hexpand "false" 
     (circular-progress 
-			:value {replace(EWW_TEMPS, 'NaN', "null")["CORETEMP_PACKAGE_ID_0"]}
+			:value {replace(EWW_TEMPS, 'NaN', "null")["THINKPAD_CPU"]}
 			:start-at 75
       :class "circular temp-bar"
       :thickness 2
       (button 
-        :class "button-bar circular-button"
-        :tooltip "Temperature CPU ${replace(EWW_TEMPS, 'NaN', "null")["CORETEMP_PACKAGE_ID_0"]}°C"
+        :class "circular-button"
+        :tooltip "Temperature CPU ${replace(EWW_TEMPS, 'NaN', "null")["THINKPAD_CPU"]}°C"
  ;     :onclick "$HOME/.config/eww/bar/scripts/pop system"
 				(label 
 					:text ""
-					:class "circular-text"
+					:class "circular-text text-temp"
 				)
 			)
 		)
@@ -299,7 +300,7 @@
 				(label 
 					;:text "${EWW_BATTERY.BAT0["status"] != "Charging" ? "󰁹": "󰂄"}"
 					:text "${EWW_BATTERY.BAT0["status"] != "Charging" ? "󰁹": ""}"
-					:class "circular-text battery-text"
+					:class "circular-text text-battery"
 				)
 			)
 		)
@@ -336,11 +337,10 @@
       	:thickness 2
 				:clockwise true
 				(button   
-					:onclick "scripts/popup audio"   
 					:class "circular-button"
 					(label 
 						:text ""
-						:class "circular-text"
+						:class "circular-text text-bright"
 					)
 				)
 			)
@@ -381,7 +381,7 @@
       	:thickness 2
 				:clockwise true
 				(button   
-					;:onclick "scripts/popup audio"   
+					:onclick "scripts/popup audio"   
 					:class "circular-button" 
 					(label 
 						:text ""

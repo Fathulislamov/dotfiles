@@ -21,8 +21,12 @@ local key = {
 		q = { '<esc>:ConfirmQuit<cr>', "quit" },
 		Q = { '<esc>:ConfirmQuitAll<cr>', "quit all" },
 		c = { ':nohlsearch<cr>', "clear the highlighting search" },
-		i = { '<c-w>r<cr>', "move window left" },
-		o = { '<c-w>r<cr>', "move window right" },
+		m = {
+			name = "Move window",
+			i = { '<c-w>r<cr>', "move window left" },
+			o = { '<c-w>r<cr>', "move window right" },
+		},
+		o = { '<c-o>', 'jump to older cursor position' },
 		w = { '<esc>:tabprevious <cr>', "tab previous" },
 		r = { '<esc>:tabnext <cr>', "tab next" },
 	}

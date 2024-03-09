@@ -1,4 +1,4 @@
-*{
+* {
 	color: white;
 	font-size: 20px;
 }
@@ -18,110 +18,135 @@ $magenta: #BB9AF7;
 $cyan: #7DCFFF;
 $white: $foreground;
 
-.bar{
+.bar {
 	margin-top: 20px;
-  //background-color: $background;
-  background-color: $background;
+	//background-color: $background;
+	background-color: $background;
 	//border-radius: 8px;
 	//opacity: 0.5;
 }
-.left{
+
+.left {
 	padding-top: 0.4rem;
 	margin-left: 0.3rem;
-	.workspace-entry{
+
+	.workspace-entry {
 		margin-left: 0.5rem;
 	}
 }
+
 .right {
 	padding: 0 10px 0 0;
 }
+
 .workspace {
 	font-size: 18px;
 	padding: 4px;
 	color: $textcolor;
 }
-.time-btn{
+
+.time-btn {
 	padding-bottom: 5px;
-	.time-label{
-		font-size:19px;
+
+	.time-label {
+		font-size: 19px;
 		color: $textcolor;
 	}
+
 	&:hover {
-//	background-color: red;
+		//	background-color: red;
 	}
 }
+
 .membar {
-  color: #e0b089;
-  background-color: #38384d;
-  border-radius: 10px;
+	color: #e0b089;
+	background-color: #38384d;
+	border-radius: 10px;
 }
-.test{
+
+.test {
 
 	color: red;
 }
 
 // Calendar
 .background.calendar {
-  background-color: #121212;
+	background-color: #121212;
 	border-radius: 15px;
 }
-.calendar-day-base{
+
+.calendar-day-base {
 	background-color: green;
 }
+
 .cal-box {
 	border-radius: 15px;
-  .cal-inner-box {
-			border-radius: 20px;
-      padding: 0.5rem;
-      .cal {
+
+	.cal-inner-box {
+		border-radius: 20px;
+		padding: 0.5rem;
+
+		.cal {
+			color: $textcolor;
+			padding: 0.3rem 0.2rem;
+
+			&.highlight {
 				color: $textcolor;
-        padding: 0.3rem 0.2rem;
-        &.highlight {
-					color: $textcolor;
-        }
-        &.view {
+			}
+
+			&.view {
 				border: none;
-  			background-color: #121212;
+				background-color: #121212;
 				margin-top: 10px;
-        }
-        &:selected {
-					color:  $background;
-					background-color: #9ebbcc;
-					border-radius: 5px;
-        }
-				&:indeterminate {
-					color: #757575;
-				}
-				&.button {
-					color: $magenta;
-				}
-      }
-  }
+			}
+
+			&:selected {
+				color: $background;
+				background-color: #9ebbcc;
+				border-radius: 5px;
+			}
+
+			&:indeterminate {
+				color: #757575;
+			}
+
+			&.button {
+				color: $magenta;
+			}
+		}
+	}
 }
+
 .circular {
 	background-color: transparent;
-	//background-color: black;
 	color: $textcolor;
-	.circular-button{
+
+	.circular-button {
 		all: unset;
 	}
-	.circular-text{
-		padding: 7px;
+
+	.circular-text {
+		padding: 6px 13px 6px 6px;
 		color: $textcolor;
 		background-color: transparent;
 	}
+
+	.text-battery {
+		padding: 10px;
+	}
+
+	.text-temp {
+		padding: 10px;
+		font-size: 20px;
+	}
 }
 
-.circular-button .cpu-icon{
-		padding: 10px;
-	font-size: 18px;
-}
-.circular-button .mem-icon{
-		padding: 10px;
+.circular-button .mem-icon {
+	padding: 10px;
 	font-size: 17px;
 }
 
-.wifi-icon{
+.wifi-icon {
 	all: unset;
 	color: $textcolor;
 	background-color: $background;
@@ -131,39 +156,31 @@ $white: $foreground;
 	all: unset;
 	margin-right: 20px;
 }
-.batbar .battery-text{
-	padding-top: 7px;
-	font-size: 16px;
-}
 
-.powermenu{
+.powermenu {
 	padding: 20px;
 	background-color: $background;
 	border-radius: 15px;
-	.button-power{
+
+	.button-power {
 		all: unset;
 		padding: 3px;
 	}
-}
-.window-power{
-	margin-right: 200px;
-}
-.brightness-icon{
-	color: white;
 }
 
 scale {
 	min-width: 8rem;
 	padding: 0 10px;
+
 	trough {
- 		background-color: $textcolor;
- 		border-radius: 5px;
- 		min-height: 8px;
- 		min-width: 10px;
-		 highlight {
-  		background-color: $textcolor;
-  		border-radius: 5px;
+		background-color: $textcolor;
+		border-radius: 5px;
+		min-height: 8px;
+		min-width: 10px;
+
+		highlight {
+			background-color: $textcolor;
+			border-radius: 5px;
 		}
 	}
 }
-

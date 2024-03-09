@@ -8,6 +8,8 @@ local has_words_before = function()
 end
 
 local luasnip = require("luasnip")
+luasnip.filetype_extend("javascript", { "javascriptreact" }) -- For `luasnip` users.
+luasnip.filetype_extend("javascript", { "html" })            -- For `luasnip` users.
 
 cmp.setup({
 	snippet = {
@@ -15,6 +17,8 @@ cmp.setup({
 		expand = function(args)
 			--vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
 			require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+			--require('luasnip').filetype_extend("javascript"", {"javascriptreact"}) -- For `luasnip` users.
+			--require('luasnip').filetype_extend("javascript"", {"html"}) -- For `luasnip` users.
 			-- require('snippy').expand_snippet(args.body) -- For `snippy` users.
 			-- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
 		end,
@@ -61,7 +65,12 @@ cmp.setup({
 			{ name = 'luasnip' }, -- For luasnip users.
 		},
 		{
-			{ name = 'buffer' },
+			{
+				name = 'buffer',
+				option = {
+					keyword_length = 1
+				}
+			},
 		}),
 	formatting = {
 		kind_icons = {
@@ -145,12 +154,16 @@ cmp.setup.cmdline(':', {
 -- Set up lspconfig.
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-local lspServers = { 'tsserver', 'lua_ls' }
+--local lspServers = { 'tsserver', 'lua_ls' }
+local lspServers = { 'lua_ls' }
 for index, server in ipairs(lspServers) do
 	require('lspconfig')[lspServers[index]].setup {
 		capabilities = capabilities
 	}
 end
+require('lspconfig')["typescript-tools"].setup {
+	capabilities = capabilities,
+}
 
 -- gray
 vim.api.nvim_set_hl(0, 'CmpItemAbbrDeprecated', { bg = 'NONE', strikethrough = true, fg = '#808080' })

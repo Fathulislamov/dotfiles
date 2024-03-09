@@ -1,7 +1,12 @@
 ---@diagnostic disable: undefined-global
 -- Setup language servers.
 local lspconfig = require('lspconfig')
-lspconfig.tsserver.setup {}
+--lspconfig.tsserver.setup {}
+lspconfig.html.setup {}
+lspconfig.cssls.setup {}
+lspconfig.prettier.setup {}
+lspconfig.prettierd.setup {}
+lspconfig.emmet_language_server.setup {}
 lspconfig.lua_ls.setup {
 	settings = {
 		Lua = {
