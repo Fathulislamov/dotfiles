@@ -1,0 +1,11 @@
+#! /bin/bash
+STATUS=$(eww ping) 
+
+
+if [[ "${STATUS}" = "pong" ]]; then
+	$(eww kill)
+else
+	$(eww open bar &)
+fi
+
+
