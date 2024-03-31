@@ -1,6 +1,6 @@
 #!/bin/sh
 
-HYPRLAND_DEVICE="pnp0c50:00-0911:5288-touchpad"
+HYPRLAND_DEVICE="elan06c9:00-04f3:320b-touchpad"
 
 if [ -z "$XDG_RUNTIME_DIR" ]; then
   export XDG_RUNTIME_DIR=/run/user/$(id -u)

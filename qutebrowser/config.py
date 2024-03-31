@@ -1511,7 +1511,7 @@ c.fonts.hints = 'bold default_size default_family'
 ## Enable Opera-like mouse rocker gestures. This disables the context
 ## menu.
 ## Type: Bool
-#c.input.mouse.rocker_gestures = True
+c.input.mouse.rocker_gestures = True
 
 ## Timeout (in milliseconds) for partially typed key bindings. If the
 ## current input forms only partial matches, the keystring will be
