@@ -10,25 +10,26 @@ vim.keymap.set("n", "<leader>Q", require "confirm-quit".confirm_quit_all)
 
 local key = {
 	['<leader>'] = {
-		l = { '<c-w>l<cr>', "switch cursor right" },
-		h = { '<c-w>h<cr>', "switch cursor left" },
-		j = { '<c-w>j<cr>', "switch cursor down" },
-		k = { '<c-w>k<cr>', "switch cursor up" },
-		n = { ':tabnew <cr>', "open new tab" },
+		l  = { '<c-w>l<cr>', "switch cursor right" },
+		h  = { '<c-w>h<cr>', "switch cursor left" },
+		j  = { '<c-w>j<cr>', "switch cursor down" },
+		k  = { '<c-w>k<cr>', "switch cursor up" },
+		n  = { ':tabnew <cr>', "open new tab" },
 		dd = { '"_d<cr>', "delete" },
-		s = { '<esc>:w<cr>', "save" },
-		x = { '<esc>:so ~/.config/nvim/init.lua<cr>', "reaload config" },
-		q = { '<esc>:ConfirmQuit<cr>', "quit" },
-		Q = { '<esc>:ConfirmQuitAll<cr>', "quit all" },
-		c = { ':nohlsearch<cr>', "clear the highlighting search" },
-		m = {
+		s  = { '<esc>:w<cr>', "save" },
+		x  = { '<esc>:so ~/.config/nvim/init.lua<cr>', "reaload config" },
+		q  = { '<esc>:ConfirmQuit<cr>', "quit" },
+		Q  = { '<esc>:ConfirmQuitAll<cr>', "quit all" },
+		c  = { ':nohlsearch<cr>', "clear the highlighting search" },
+		m  = {
 			name = "Move window",
 			i = { '<c-w>r<cr>', "move window left" },
 			o = { '<c-w>r<cr>', "move window right" },
 		},
-		o = { '<c-o>', 'jump to older cursor position' },
-		w = { '<esc>:tabprevious <cr>', "tab previous" },
-		r = { '<esc>:tabnext <cr>', "tab next" },
+		o  = { '<c-o>', 'jump to older cursor position' },
+		w  = { '<esc>:tabprevious <cr>', "tab previous" },
+		r  = { '<esc>:tabnext <cr>', "tab next" },
+		u  = { '<esc>:set number!<cr>', "toggle line-numbering" },
 	}
 }
 which_key.register(key)

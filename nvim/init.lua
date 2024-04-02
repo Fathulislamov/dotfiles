@@ -9,11 +9,12 @@ set.swapfile = false -- Disable swap file creation
 set.termguicolors = true -- Sets 256 colors
 set.scrolloff = 8 -- Scroll offset
 set.fillchars = { eob = " " } -- Hide ~
-set.mouse = "" -- Disable mouse
+--set.mouse = "" -- Disable mouse
 set.showtabline = 0 -- Hide bufferline
 set.modifiable = true
 vim.wo.wrap = false
 
+cmd("set number! foldcolumn=1") -- Disable line-numbering
 cmd("syntax on") -- Enable syntax highlighting
 cmd("syntax enable") -- Enable syntax highlighting
 cmd("set signcolumn=no")
