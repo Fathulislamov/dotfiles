@@ -59,19 +59,38 @@ require("lazy").setup({
 	{ 'crwebb85/telescope-media-files.nvim' },
 
 	{
-	"robitx/gp.nvim",
-	config = function()
-		require("gp").setup()
+		"robitx/gp.nvim",
+		config = function()
+			require("gp").setup()
 
-		-- or setup with your own config (see Install > Configuration in Readme)
-		-- require("gp").setup(config)
+			-- or setup with your own config (see Install > Configuration in Readme)
+			-- require("gp").setup(config)
 
-        	-- shortcuts might be setup here (see Usage > Shortcuts in Readme)
-				end,
-			},
+			-- shortcuts might be setup here (see Usage > Shortcuts in Readme)
+		end,
+	},
+	{
+		"kdheepak/lazygit.nvim",
+		cmd = {
+			"LazyGit",
+			"LazyGitConfig",
+			"LazyGitCurrentFile",
+			"LazyGitFilter",
+			"LazyGitFilterCurrentFile",
+		},
+		-- optional for floating window border decoration
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+		},
+		-- setting the keybinding for LazyGit with 'keys' is recommended in
+		-- order to load the plugin when the command is run for the first time
+		keys = {
+			{ "<leader>lG", "<cmd>LazyGit<cr>", desc = "LazyGit" }
+		}
+	},
 
 	-- LSP
-	{ 'neovim/nvim-lspconfig' }, -- LSP config
+			{ 'neovim/nvim-lspconfig' }, -- LSP config
 	{ 'williamboman/mason.nvim' },
 	{ 'williamboman/mason-lspconfig.nvim' },
 	{ 'nvim-lua/lsp-status.nvim' }, -- Get stat us LSP
@@ -90,3 +109,4 @@ require("lazy").setup({
 	{ 'saadparwaiz1/cmp_luasnip', dependencies = { "rafamadriz/friendly-snippets" } },
 	{ 'onsails/lspkind.nvim' }, -- Icon vs code in Autocompletion
 })
+

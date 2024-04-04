@@ -48,6 +48,7 @@ require("autoclose").setup()    -- Autopair
 require("neoclip").setup()      -- Clipboard
 require("plugin-typescript-tools")
 require("telescope").load_extension("media_files")
+require("plugin-lazygit")
 --require("lsp-status").config({})   -- Autopair
 require("conform").setup({
 	formatters_by_ft = {
