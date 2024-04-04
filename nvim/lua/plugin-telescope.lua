@@ -33,7 +33,7 @@ vim.keymap.set('n', '<leader>wh', builtin.help_tags, {})
 local which_key = require("which-key")
 local keymap = {
 	["<Leader>"] = {
-		w = {
+		 w = {
 			name = "Telescope",
 			f = "Find file",
 			g = "Live grep",

@@ -1,5 +1,4 @@
----@diagnostic disable: undefined-global
-local which_key = require("which-key")
+---@diagnostic disable: undefined-global local which_key = require("which-key")
 -- Remap leader and local leader to <Space>
 -- keymap("", "<Space>", "<Nop>", { noremap = true, silent = true })
 vim.g.mapleader = " "
@@ -7,7 +6,7 @@ vim.g.maplocalleader = " "
 
 vim.keymap.set("n", "<leader>q", require "confirm-quit".confirm_quit)
 vim.keymap.set("n", "<leader>Q", require "confirm-quit".confirm_quit_all)
-
+which_key = require("which-key")
 local key = {
 	['<leader>'] = {
 		l  = { '<c-w>l<cr>', "switch cursor right" },
@@ -33,3 +32,15 @@ local key = {
 	}
 }
 which_key.register(key)
+
+function sourceAllConfigFiles()
+	local folder_path = vim.fn.expand("~/.config/nvim/lua")
+	local filenames = vim.fn.glob(folder_path .. "/*", true, true)
+	for _, filename in ipairs(filenames) do
+		vim.cmd(":source" .. filename)
+	end
+end
+
+which_key.register({
+	['<F10>'] = { ':lua sourceAllConfigFiles()<CR>', 'Source all config files' },
+})

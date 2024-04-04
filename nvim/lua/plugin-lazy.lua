@@ -51,13 +51,24 @@ require("lazy").setup({
 		}
 	},
 	{
-  'stevearc/conform.nvim',
-  opts = {},
-},
+		'stevearc/conform.nvim',
+		opts = {},
+	},
 	{ 'styled-components/vim-styled-components' },
-	{ 'nvim-lua/popup.nvim'},
-	{'crwebb85/telescope-media-files.nvim'},
+	{ 'nvim-lua/popup.nvim' },
+	{ 'crwebb85/telescope-media-files.nvim' },
 
+	{
+	"robitx/gp.nvim",
+	config = function()
+		require("gp").setup()
+
+		-- or setup with your own config (see Install > Configuration in Readme)
+		-- require("gp").setup(config)
+
+        	-- shortcuts might be setup here (see Usage > Shortcuts in Readme)
+				end,
+			},
 
 	-- LSP
 	{ 'neovim/nvim-lspconfig' }, -- LSP config
