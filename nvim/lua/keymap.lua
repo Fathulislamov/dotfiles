@@ -1,4 +1,4 @@
----@diagnostic disable: undefined-global local which_key = require("which-key")
+--@diagnostic disable: undefined-global local which_key = require("which-key")
 -- Remap leader and local leader to <Space>
 -- keymap("", "<Space>", "<Nop>", { noremap = true, silent = true })
 vim.g.mapleader = " "
@@ -6,7 +6,7 @@ vim.g.maplocalleader = " "
 
 vim.keymap.set("n", "<leader>q", require "confirm-quit".confirm_quit)
 vim.keymap.set("n", "<leader>Q", require "confirm-quit".confirm_quit_all)
-which_key = require("which-key")
+local which_key = require("which-key")
 local key = {
 	['<leader>'] = {
 		l  = { '<c-w>l<cr>', "switch cursor right" },
@@ -29,7 +29,8 @@ local key = {
 		w  = { '<esc>:tabprevious <cr>', "tab previous" },
 		r  = { '<esc>:tabnext <cr>', "tab next" },
 		u  = { '<esc>:set number!<cr>', "toggle line-numbering" },
-	}
+	},
+	['<F10>'] = { ':lua sourceAllConfigFiles()<CR>', 'Source all config files' },
 }
 which_key.register(key)
 
@@ -41,6 +42,3 @@ function sourceAllConfigFiles()
 	end
 end
 
-which_key.register({
-	['<F10>'] = { ':lua sourceAllConfigFiles()<CR>', 'Source all config files' },
-})

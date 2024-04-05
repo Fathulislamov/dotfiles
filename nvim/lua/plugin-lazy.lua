@@ -13,7 +13,8 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	{ 'tomasiser/vim-code-dark' },                                               -- Colorscheme
-	{ 'folke/noice.nvim',                event = "VeryLazy", },                  -- Notification
+	require('Noice'),                                                     -- Completely replaces the UI
+
 	{ 'MunifTanjim/nui.nvim', },                                                 -- Dependencies noice
 	{ 'rcarriga/nvim-notify' },                                                  -- Dependencies noice
 	{ 'dinhhuy258/sfm.nvim',             event = "VeryLazy" },                   -- File explorer
@@ -42,6 +43,7 @@ require("lazy").setup({
 				require('nvim-emmet').wrap_with_abbreviation)
 		end
 	},
+	require('plugin-lazygit'),
 	{ 'mlaursen/vim-react-snippets' },
 	{ 'r5n-dev/vscode-react-javascript-snippets' },
 	{
@@ -69,28 +71,8 @@ require("lazy").setup({
 			-- shortcuts might be setup here (see Usage > Shortcuts in Readme)
 		end,
 	},
-	{
-		"kdheepak/lazygit.nvim",
-		cmd = {
-			"LazyGit",
-			"LazyGitConfig",
-			"LazyGitCurrentFile",
-			"LazyGitFilter",
-			"LazyGitFilterCurrentFile",
-		},
-		-- optional for floating window border decoration
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-		},
-		-- setting the keybinding for LazyGit with 'keys' is recommended in
-		-- order to load the plugin when the command is run for the first time
-		keys = {
-			{ "<leader>lG", "<cmd>LazyGit<cr>", desc = "LazyGit" }
-		}
-	},
-
 	-- LSP
-			{ 'neovim/nvim-lspconfig' }, -- LSP config
+	{ 'neovim/nvim-lspconfig' }, -- LSP config
 	{ 'williamboman/mason.nvim' },
 	{ 'williamboman/mason-lspconfig.nvim' },
 	{ 'nvim-lua/lsp-status.nvim' }, -- Get stat us LSP
@@ -109,4 +91,3 @@ require("lazy").setup({
 	{ 'saadparwaiz1/cmp_luasnip', dependencies = { "rafamadriz/friendly-snippets" } },
 	{ 'onsails/lspkind.nvim' }, -- Icon vs code in Autocompletion
 })
-
