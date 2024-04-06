@@ -21,7 +21,7 @@ require("telescope").setup {
 	},
 }
 
-require('telescope').load_extension('luasnip')
+--require('telescope').load_extension('luasnip')
 
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>wf', builtin.find_files, {})
@@ -33,16 +33,31 @@ vim.keymap.set('n', '<leader>wh', builtin.help_tags, {})
 local which_key = require("which-key")
 local keymap = {
 	["<Leader>"] = {
-		 w = {
+		w = {
 			name = "Telescope",
 			f = "Find file",
 			g = "Live grep",
 			b = "Find buffers",
 			h = "Help tags",
 			c = { ':Telescope neoclip<cr>', 'Clipboard' },
-			s = { ':Telescope luasnip<cr>', 'Snippets' },
+--			s = { ':Telescope luasnip<cr>', 'Snippets' },
 			p = { ':Telescope media_files<cr>', 'Preview image' },
 		}
 	}
 }
 which_key.register(keymap, { mode = { "n" } })
+
+
+
+require("telescope").setup {
+	defaults = {
+		theme = "center",
+		sorting_strategy = "ascending",
+		layout_config = {
+			horizontal = {
+				prompt_position = "top",
+				preview_width = 0.5,
+			},
+		},
+	},
+}

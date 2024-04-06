@@ -41,4 +41,3 @@ function sourceAllConfigFiles()
 		vim.cmd(":source" .. filename)
 	end
 end
-

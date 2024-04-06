@@ -1,4 +1,16 @@
-require("toggleterm").setup { -- size can be a number or function which is passed the current terminal
+
+--local which_key = require("which-key")
+local keymap = {
+	['<c-t>'] = { '<cmd>ToggleTerm<CR>', "Toggle terminal" },
+}
+-- which_key.register(keymap)
+--which_key.register(keymap, { mode = { "n", "t" } })
+
+return {
+  {'akinsho/toggleterm.nvim', 
+	version = "*", 
+	opts = {--[[ things you want to change go here]]
+	
 	size = function(term)
 		if term.direction == "horizontal" then
 			return 15
@@ -38,11 +50,6 @@ require("toggleterm").setup { -- size can be a number or function which is passe
 			background = "Normal",
 		}
 	}
+}}
 }
 
-local which_key = require("which-key")
-local keymap = {
-	['<c-t>'] = { '<cmd>ToggleTerm<CR>', "Toggle terminal" },
-}
--- which_key.register(keymap)
-which_key.register(keymap, { mode = { "n", "t" } })
