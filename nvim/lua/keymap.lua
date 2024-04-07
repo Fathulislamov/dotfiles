@@ -1,6 +1,3 @@
---@diagnostic disable: undefined-global local which_key = require("which-key")
--- Remap leader and local leader to <Space>
--- keymap("", "<Space>", "<Nop>", { noremap = true, silent = true })
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 

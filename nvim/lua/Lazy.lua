@@ -1,6 +1,4 @@
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
-	vim.fn.system({
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim" if not vim.loop.fs_stat(lazypath) then vim.fn.system({
 		"git",
 		"clone",
 		"--filter=blob:none",
@@ -12,25 +10,24 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	{ 'tomasiser/vim-code-dark' }, -- Colorscheme
-	require('Noice'),             -- Completely replaces the UI
+	require('Theme'), -- Colorscheme
+	require('Noice'), -- Completely replaces the UI
 	require('Telescope-file-browser'),
 	require('ChatGPT'),
 	require('Which-key'),
-	require('Auto-save'),                                      -- Auto save
-	require('Lualine'),                                        -- Status bar
-	require('Neoscroll'),                                      -- Smooth scroll
-	require('Toggleterm'),                                     -- Terminal
-	require('Pantran'),                                        -- Translate
-	require('Hop'),                                             -- Motion
-
-	{ 'dinhhuy258/sfm.nvim', event = "VeryLazy" },             -- File explorer
-	--	{ 'nvim-treesitter/nvim-treesitter', build = ":TSUpdate" },                  -- Highlighting
-	--	{ 'Frederick888/hydra.nvim',         branch = "self" },                      -- Custom mode
-	{ 'nvim-telescope/telescope.nvim',    branch = '0.1.x', },                                          -- Fuzzy finder
-	--	{ 'NvChad/nvim-colorizer.lua', },                                            -- Highlighting color
+	require('Auto-save'), -- Auto save
+	require('Lualine'),   -- Status bar
+	require('Neoscroll'), -- Smooth scroll
+	require('Toggleterm'), -- Terminal
+	require('Pantran'),   -- Translate
+	require('Hop'),       -- Motion
+	require('Treesitter'), -- Motion
+	--	require('Hydra'),                     -- Custom mode
+	require('Colorizer'), -- Highlighting color
+	require('Autoclose'), -- Autopair
+	require('telescope/Telescope'),                                                                               -- Autopair
+	--	{ 'nvim-telescope/telescope.nvim',    branch = '0.1.x', },                                          -- Fuzzy finder
 	{ 'yutkat/confirm-quit.nvim',         event = "CmdlineEnter",                           opts = {} }, -- Smart quit
-	--	{ 'm4xshen/autoclose.nvim' },                                                -- Autopair
 	--	{ 'numToStr/Comment.nvim',           opts = {},              lazy = false, }, -- Comment
 	--	{ 'AckslD/nvim-neoclip.lua' },
 	--	{
@@ -86,5 +83,6 @@ require("lazy").setup({
 	{ 'hrsh7th/cmp-path' },
 	{ 'L3MON4D3/LuaSnip' },
 	{ 'saadparwaiz1/cmp_luasnip',         dependencies = { "rafamadriz/friendly-snippets" } },
-	{ 'onsails/lspkind.nvim' }, -- Icon vs code in Autocompletion
+	{ 'onsails/lspkind.nvim' },                                -- Icon vs code in Autocompletion
+	{ 'dinhhuy258/sfm.nvim',              event = "VeryLazy" }, -- File explorer
 })

@@ -28,7 +28,7 @@ require("plugin-lsp")           -- Motion
 require("plugin-mason")         -- Mason
 require("plugin-cmp")           -- Autocompletion
 --require("plugin-pantran")       -- Hydra
-require("plugin-telescope")     -- Fuzzy finder
+--require("plugin-telescope")     -- Fuzzy finder
 --require("plugin-comment")       -- Comment
 --require("colorizer").setup()    -- Highlighting color
 --require("confirm-quit").setup() -- Smart quit

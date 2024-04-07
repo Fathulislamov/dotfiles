@@ -1,17 +1,19 @@
+local function config()
+	vim.cmd 'highlight HopNextKey guifg=#c2c52d'
+	vim.cmd 'highlight HopNextKey1 guifg=#c2c52d'
+	vim.cmd 'highlight HopNextKey2 guifg=#c2c52d'
 
-vim.cmd 'highlight HopNextKey guifg=#c2c52d'
-vim.cmd 'highlight HopNextKey1 guifg=#c2c52d'
-vim.cmd 'highlight HopNextKey2 guifg=#c2c52d'
-
---local which_key = require("which-key")
-local keymap = {
-	["<Leader>"] = {
-		f = { '<cmd>HopWord<CR>', "Motion" },
+	local which_key = require("which-key")
+	local keymap = {
+		["<Leader>"] = {
+			f = { '<cmd>HopWord<CR>', "Motion" },
+		}
 	}
-}
--- which_key.register(keymap)
---which_key.register(keymap, { mode = { "n" } })
+	which_key.register(keymap)
+end
+
 return {
-	'Pocco81/auto-save.nvim',
+	'phaazon/hop.nvim',
 	event = "VeryLazy",
+	opts = config
 }
