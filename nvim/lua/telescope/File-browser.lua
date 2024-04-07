@@ -4,9 +4,13 @@ local function loadModule()
 	require("telescope").setup {
 		extensions = {
 			file_browser = {
---				theme = "ivy",
+				--		theme = "center",
 				-- disables netrw and use telescope-file-browser in its place
-				hijack_netrw = true,
+				--		hijack_netrw = false,
+				initial_browser = 'tree',
+				previewer = true,
+				auto_depth = true,
+
 				--	mappings = {
 				--	["i"] = {
 				-- your custom insert mode mappings
@@ -26,6 +30,7 @@ local function config()
 	local fb_actions = require "telescope._extensions.file_browser.actions"
 
 	require("telescope").setup {
+		--theme = "ivy",
 		extensions = {
 			file_browser = {
 				path = vim.loop.cwd(),
@@ -35,24 +40,25 @@ local function config()
 				files = true,
 				add_dirs = true,
 				depth = 1,
-				auto_depth = false,
+				--				auto_depth = false,
 				select_buffer = false,
 				hidden = { file_browser = false, folder_browser = false },
 				respect_gitignore = vim.fn.executable "fd" == 1,
 				no_ignore = false,
 				follow_symlinks = false,
-				browse_files = require("telescope._extensions.file_browser.finders").browse_files,
+				--				browse_files = require("telescope._extensions.file_browser.finders").browse_files,
 				browse_folders = require("telescope._extensions.file_browser.finders").browse_folders,
-				hide_parent_dir = false,
+				hide_parent_dir = true,
 				collapse_dirs = false,
 				prompt_path = false,
-				quiet = false,
+				quiet = true,
 				dir_icon = "",
-				dir_icon_hl = "Default",
-				display_stat = { date = true, size = true, mode = true },
+				--dir_icon_hl = "Default",
+				dir_icon_hl = ">>",
+				display_stat = { date = true, size = true, mode = false },
 				hijack_netrw = false,
 				use_fd = true,
-				git_status = true,
+				git_status = false,
 				mappings = {
 					["i"] = {
 						["<A-c>"] = fb_actions.create,
@@ -66,7 +72,7 @@ local function config()
 						["<C-e>"] = fb_actions.goto_home_dir,
 						["<C-w>"] = fb_actions.goto_cwd,
 						["<C-t>"] = fb_actions.change_cwd,
-						["<C-f>"] = fb_actions.toggle_browser,
+						--		["<C-f>"] = fb_actions.toggle_browser,
 						["<C-h>"] = fb_actions.toggle_hidden,
 						["<C-s>"] = fb_actions.toggle_all,
 						["<bs>"] = fb_actions.backspace,
@@ -82,7 +88,7 @@ local function config()
 						["e"] = fb_actions.goto_home_dir,
 						["w"] = fb_actions.goto_cwd,
 						["t"] = fb_actions.change_cwd,
-						["f"] = fb_actions.toggle_browser,
+						--		["f"] = fb_actions.toggle_browser,
 						["h"] = fb_actions.toggle_hidden,
 						["s"] = fb_actions.toggle_all,
 					},
@@ -93,7 +99,9 @@ local function config()
 end
 return {
 	"nvim-telescope/telescope-file-browser.nvim",
+	branch = "feat/tree",
 	dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+
 	init = loadModule,
 	config = config
 }
