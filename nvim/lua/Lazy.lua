@@ -12,7 +12,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	require('Theme'), -- Colorscheme
 	require('Noice'), -- Completely replaces the UI
-	require('Telescope-file-browser'),
+--	require('Telescope-file-browser'),
 	require('ChatGPT'),
 	require('Which-key'),
 	require('Auto-save'), -- Auto save

@@ -62,4 +62,4 @@ local key = {
 	}
 }
 local which_key = require("which-key")
-which_key.register(key)
+--which_key.register(key)
