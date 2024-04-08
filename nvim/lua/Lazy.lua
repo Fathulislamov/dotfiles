@@ -26,7 +26,8 @@ require("lazy").setup({
 	require('Colorizer'), -- Highlighting color
 	require('Autoclose'), -- Autopair
 	require('telescope/Telescope'),                                                                               -- Autopair
-	--	{ 'nvim-telescope/telescope.nvim',    branch = '0.1.x', },                                          -- Fuzzy finder
+	require('Cmp'),                                                                               -- Autopair
+	require('Lsp'),                                                                               -- Autopair
 	{ 'yutkat/confirm-quit.nvim',         event = "CmdlineEnter",                           opts = {} }, -- Smart quit
 	--	{ 'numToStr/Comment.nvim',           opts = {},              lazy = false, }, -- Comment
 	--	{ 'AckslD/nvim-neoclip.lua' },
@@ -66,23 +67,14 @@ require("lazy").setup({
 	--		end,
 	--	},
 	--	-- LSP
-	{ 'neovim/nvim-lspconfig' }, -- LSP config
-	{ 'williamboman/mason.nvim' },
-	{ 'williamboman/mason-lspconfig.nvim' },
-	{ 'nvim-lua/lsp-status.nvim' }, -- Get stat us LSP
+--	{ 'neovim/nvim-lspconfig' }, -- LSP config
 	--	{
 	--		'pmizio/typescript-tools.nvim',
 	--		dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
 	--		opts = {},
 	--	},
 	-- Autocompletion
-	{ 'hrsh7th/nvim-cmp' }, -- Autocompletion
-	{ 'hrsh7th/cmp-nvim-lsp' },
-	{ 'hrsh7th/cmp-cmdline' },
-	{ 'hrsh7th/cmp-buffer' },
-	{ 'hrsh7th/cmp-path' },
 	{ 'L3MON4D3/LuaSnip' },
-	{ 'saadparwaiz1/cmp_luasnip',         dependencies = { "rafamadriz/friendly-snippets" } },
 	{ 'onsails/lspkind.nvim' },                                -- Icon vs code in Autocompletion
 	{ 'dinhhuy258/sfm.nvim',              event = "VeryLazy" }, -- File explorer
 })

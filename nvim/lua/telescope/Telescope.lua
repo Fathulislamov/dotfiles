@@ -101,6 +101,6 @@ return {
 	opts = Keymap,
 	dependencies = {
 		--		require('telescope/Luasnip'),
-		require('telescope/File-browser')
+	--	require('telescope/File-browser')
 	}
 } -- Fuzzy finder

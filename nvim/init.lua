@@ -24,9 +24,9 @@ require("plugin-sfm")         -- File manager
 --require("plugin-hydra")         -- hidra
 --require("plugin-treesitter") -- Highlighting
 --require("plugin-hop")           -- Motion
-require("plugin-lsp")           -- Motion
+--require("plugin-lsp")           -- Motion
 require("plugin-mason")         -- Mason
-require("plugin-cmp")           -- Autocompletion
+--require("plugin-cmp")           -- Autocompletion
 --require("plugin-pantran")       -- Hydra
 --require("plugin-telescope")     -- Fuzzy finder
 --require("plugin-comment")       -- Comment
@@ -40,14 +40,6 @@ require("plugin-cmp")           -- Autocompletion
 
 --require("lsp-status").config({})   -- Autopair
 
-cmd("colorscheme codedark")
-cmd [[
-augroup kitty_padding_color
-    autocmd!
-    au VimEnter * :silent !kitty @ set-colors background=\#1E1E1E
-    au VimLeave * :silent !kitty @ set-colors background=\#000000
-augroup END
-]]
 
 --require("luasnip.loaders.from_vscode").lazy_load()
 --require('plugin-chatGPT')

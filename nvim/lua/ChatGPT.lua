@@ -1,18 +1,20 @@
 local function config()
-	api_host_cmd = 'echo -n https://api.proxyapi.ru/openai'
+	      require("chatgpt").setup({
+					api_host_cmd = 'echo -n https://api.proxyapi.ru/openai'
+})
 
-	local which_key = require("which-key")
+end
+--	local which_key = require("which-key")
 	local keymap = {
 		["<Leader>"] = {
 			c = { '<cmd>chatgpt<cr>', "motion" },
 		}
 	}
-	which_key.register(keymap)
-end
+--	which_key.register(keymap)
 return {
 	"jackMort/ChatGPT.nvim",
 	event = "VeryLazy",
-	opts = config,
+	config = config,
 	dependencies = {
 		"MunifTanjim/nui.nvim",
 		"nvim-lua/plenary.nvim",
