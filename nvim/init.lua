@@ -12,20 +12,21 @@ set.fillchars = { eob = " " } -- Hide ~
 --set.mouse = "" -- Disable mouse
 set.showtabline = 0           -- Hide bufferline
 set.modifiable = true
+--set.timeoutlen = 1000         --time to wait for a mapped sequence to complete
 vim.wo.wrap = false
 
 --cmd("set number! foldcolumn=1") -- Disable line-numbering
-cmd("syntax on")                -- Enable syntax highlighting
-cmd("syntax enable")            -- Enable syntax highlighting
+cmd("syntax on")     -- Enable syntax highlighting
+cmd("syntax enable") -- Enable syntax highlighting
 cmd("set signcolumn=no")
 
-require("Lazy")          -- Plugin manager
-require("plugin-sfm")         -- File manager
+require("Lazy")       -- Plugin manager
+require("plugin-sfm") -- File manager
 --require("plugin-hydra")         -- hidra
 --require("plugin-treesitter") -- Highlighting
 --require("plugin-hop")           -- Motion
 --require("plugin-lsp")           -- Motion
-require("plugin-mason")         -- Mason
+require("plugin-mason") -- Mason
 --require("plugin-cmp")           -- Autocompletion
 --require("plugin-pantran")       -- Hydra
 --require("plugin-telescope")     -- Fuzzy finder
@@ -44,4 +45,4 @@ require("plugin-mason")         -- Mason
 --require("luasnip.loaders.from_vscode").lazy_load()
 --require('plugin-chatGPT')
 --require("luasnip.loaders.from_vscode").lazy_load({ paths = { "./lua/snippets.json" } })
-require("keymap")          -- Plugin manager
+require("keymap") -- Plugin manager

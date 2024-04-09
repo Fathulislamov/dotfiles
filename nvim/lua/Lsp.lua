@@ -61,48 +61,48 @@ local function config()
 		float = { border = "rounded" },
 	}
 
---	local which_key = require("which-key")
---	local keymap = {
---		["<Leader>"] = {
---			a = {
---				name = 'LSP',
---				d = {
---					name = 'Diagnostic',
---					o = 'Open diagnostic float',
---					p = 'Diagnostic previous',
---					n = 'Diagnostic next',
---					l = 'Diagnostic list',
---				},
---				g = {
---					name = 'Go to',
---					D = 'Declaration',
---					d = 'Definition',
---				},
---				k = 'Displays information under the cursor',
---				s = 'Signature',
---				w = {
---					name = 'Workspase',
---					a = 'Add folder',
---					r = 'Remove folder',
---					l = 'List folders',
---				},
---				t = 'Type definition',
---			r = 'Rename',
---				a = 'Code action',
---				n = 'References',
---				f = 'Format'
---			},
---		}
---	}
---	which_key.register(keymap)
+	local which_key = require("which-key")
+	local keymap = {
+		["<Leader>"] = {
+			a = {
+				name = 'LSP',
+				d = {
+					name = 'Diagnostic',
+					o = 'Open diagnostic float',
+					p = 'Diagnostic previous',
+					n = 'Diagnostic next',
+					l = 'Diagnostic list',
+				},
+				g = {
+					name = 'Go to',
+					D = 'Declaration',
+					d = 'Definition',
+				},
+				k = 'Displays information under the cursor',
+				s = 'Signature',
+				w = {
+					name = 'Workspase',
+					a = 'Add folder',
+					r = 'Remove folder',
+					l = 'List folders',
+				},
+				t = 'Type definition',
+				r = 'Rename',
+				a = 'Code action',
+				n = 'References',
+				f = 'Format'
+			},
+		}
+	}
+	which_key.register(keymap)
 end
 
 return {
-	 'neovim/nvim-lspconfig', -- LSP config
-		config = config,
---	dependencies = {
+	'neovim/nvim-lspconfig', -- LSP config
+	config = config,
+	dependencies = {
 		{ 'williamboman/mason.nvim' },
 		{ 'williamboman/mason-lspconfig.nvim' },
 		{ 'nvim-lua/lsp-status.nvim' }, -- Get stat us LSP
---	}
+	}
 }
