@@ -1,8 +1,8 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-vim.keymap.set("n", "<leader>q", require "confirm-quit".confirm_quit)
-vim.keymap.set("n", "<leader>Q", require "confirm-quit".confirm_quit_all)
+--vim.keymap.set("n", "<leader>q", require "confirm-quit".confirm_quit)
+--vim.keymap.set("n", "<leader>Q", require "confirm-quit".confirm_quit_all)
 local which_key = require("which-key")
 local key = {
 	['<leader>'] = {
@@ -13,10 +13,7 @@ local key = {
 		n  = { ':tabnew <cr>', "open new tab" },
 		dd = { '"_d<cr>', "delete" },
 		s  = { '<esc>:w<cr>', "save" },
-		x  = { '<esc>:so ~/.config/nvim/init.lua<cr>', "reaload config" },
-		q  = { '<esc>:ConfirmQuit<cr>', "quit" },
-		Q  = { '<esc>:ConfirmQuitAll<cr>', "quit all" },
---		c  = { ':nohlsearch<cr>', "clear the highlighting search" },
+		ch  = { ':nohlsearch<cr>', "clear the highlighting search" },
 		m  = {
 			name = "Move window",
 			i = { '<c-w>r<cr>', "move window left" },

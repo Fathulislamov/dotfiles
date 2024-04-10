@@ -15,18 +15,17 @@ set.modifiable = true
 --set.timeoutlen = 1000         --time to wait for a mapped sequence to complete
 vim.wo.wrap = false
 
---cmd("set number! foldcolumn=1") -- Disable line-numbering
+cmd("set number! foldcolumn=1") -- Disable line-numbering
 cmd("syntax on")     -- Enable syntax highlighting
 cmd("syntax enable") -- Enable syntax highlighting
 cmd("set signcolumn=no")
 
 require("Lazy")       -- Plugin manager
-require("plugin-sfm") -- File manager
 --require("plugin-hydra")         -- hidra
 --require("plugin-treesitter") -- Highlighting
 --require("plugin-hop")           -- Motion
 --require("plugin-lsp")           -- Motion
-require("plugin-mason") -- Mason
+--require("plugin-mason") -- Mason
 --require("plugin-cmp")           -- Autocompletion
 --require("plugin-pantran")       -- Hydra
 --require("plugin-telescope")     -- Fuzzy finder

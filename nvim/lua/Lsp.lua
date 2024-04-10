@@ -101,8 +101,18 @@ return {
 	'neovim/nvim-lspconfig', -- LSP config
 	config = config,
 	dependencies = {
-		{ 'williamboman/mason.nvim' },
-		{ 'williamboman/mason-lspconfig.nvim' },
+		{
+			'williamboman/mason.nvim',
+			config = function()
+				require('mason').setup()
+			end
+		},
+		{
+			'williamboman/mason-lspconfig.nvim',
+			config = function()
+				require('mason-lspconfig').setup()
+			end
+		},
 		{ 'nvim-lua/lsp-status.nvim' }, -- Get stat us LSP
 	}
 }
