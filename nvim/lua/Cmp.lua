@@ -10,7 +10,7 @@ local function config()
 
 	local luasnip = require("luasnip")
 	luasnip.filetype_extend("javascript", { "javascriptreact" }) -- For `luasnip` users.
-	luasnip.filetype_extend("javascript", { "html" })          -- For `luasnip` users.
+	luasnip.filetype_extend("javascript", { "html" })           -- For `luasnip` users.
 
 	cmp.setup({
 		snippet = {

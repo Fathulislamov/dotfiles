@@ -79,7 +79,6 @@ local function Keymap()
 				g = { '<cmd>Telescope live_grep<cr>', "Live grep" },
 				b = { '<cmd>Telescope buffers initial_mode=normal<cr>', "Buffers" },
 				t = { '<cmd>Telescope tags<cr>', "Tags" },
-				c = { ':Telescope neoclip initial_mode=normal<cr>', 'Clipboard' },
 				s = { ':Telescope luasnip<cr>', 'Snippets' },
 				p = { ':Telescope media_files initial_mode=normal<cr>', 'Preview image' },
 				o = { '<cmd>Telescope oldfiles initial_mode=normal<cr>', "Oldfiles" },
@@ -99,8 +98,8 @@ return {
 	config = config,
 	opts = Keymap,
 	dependencies = {
--- 		require('telescope/LuaSnip'),
 		require('telescope/Neoclip'),
-		require('telescope/TelescopeLuasnip')
+		require('telescope/TelescopeLuasnip'),
+		require('telescope/Media')
 	}
 } -- Fuzzy finder

@@ -1,3 +1,17 @@
+local function config()
+	local which_key = require("which-key")
+	local keymap = {
+		["<Leader>"] = {
+			t = {
+				c = { ':Telescope neoclip initial_mode=normal<cr>', 'Clipboard' },
+			}
+		}
+	}
+	which_key.register(keymap, { mode = { "n" } })
+
+	require('neoclip').setup()
+end
+
 return {
 	"AckslD/nvim-neoclip.lua",
 	requires = {
@@ -6,7 +20,5 @@ return {
 		-- {'nvim-telescope/telescope.nvim'},
 		-- {'ibhagwan/fzf-lua'},
 	},
-	config = function()
-		require('neoclip').setup()
-	end,
+	config = config
 }

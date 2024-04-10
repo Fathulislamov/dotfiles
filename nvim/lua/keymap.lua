@@ -1,8 +1,4 @@
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
 
---vim.keymap.set("n", "<leader>q", require "confirm-quit".confirm_quit)
---vim.keymap.set("n", "<leader>Q", require "confirm-quit".confirm_quit_all)
 local which_key = require("which-key")
 local key = {
 	['<leader>'] = {
@@ -13,7 +9,7 @@ local key = {
 		n  = { ':tabnew <cr>', "open new tab" },
 		dd = { '"_d<cr>', "delete" },
 		s  = { '<esc>:w<cr>', "save" },
-		ch  = { ':nohlsearch<cr>', "clear the highlighting search" },
+		ch = { ':nohlsearch<cr>', "clear the highlighting search" },
 		m  = {
 			name = "Move window",
 			i = { '<c-w>r<cr>', "move window left" },
@@ -29,9 +25,16 @@ local key = {
 which_key.register(key)
 
 function sourceAllConfigFiles()
-	local folder_path = vim.fn.expand("~/.config/nvim/lua")
-	local filenames = vim.fn.glob(folder_path .. "/*", true, true)
-	for _, filename in ipairs(filenames) do
-		vim.cmd(":source" .. filename)
+	local function ConfigFiles(folder_path)
+		local filenames = vim.fn.glob(folder_path .. "/*", true, true)
+		for _, filename in ipairs(filenames) do
+			if vim.fn.isdirectory(filename) == 1 then -- если элемент является папкой
+				ConfigFiles(filename)      -- вызываем функцию рекурсивно для этой папки
+			else
+				vim.cmd(":source " .. filename)
+			end
+		end
 	end
+
+	ConfigFiles(vim.fn.expand("~/.config/nvim/lua"))
 end

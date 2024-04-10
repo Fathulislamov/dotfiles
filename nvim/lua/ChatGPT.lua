@@ -8,7 +8,7 @@ local function config()
 	local which_key = require("which-key")
 	local keymap = {
 		["<Leader>"] = {
-			g = {
+			C = {
 				c = { "<cmd>ChatGPT<CR>", "ChatGPT" },
 				e = { "<cmd>ChatGPTEditWithInstruction<CR>", "Edit with instruction", mode = { "n", "v" } },
 				g = { "<cmd>ChatGPTRun grammar_correction<CR>", "Grammar Correction", mode = { "n", "v" } },

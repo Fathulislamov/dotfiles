@@ -14,7 +14,6 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	require('Theme'), -- Colorscheme
 	require('Noice'), -- Completely replaces the UI
-	--	require('Telescope-file-browser'),
 	require('ChatGPT'),
 	require('Which-key'),
 	require('Auto-save'), -- Auto save
@@ -27,7 +26,7 @@ require("lazy").setup({
 	--	require('Hydra'),                     --Custom mode
 	require('Colorizer'),          -- Highlighting color
 	require('Autoclose'),          -- Autopair
-	--require('telescope/Telescope'), -- Autopair
+	require('telescope/Telescope'), -- Autopair
 	require('Cmp'),                -- Autopair
 	require('Lsp'),                -- Autopair
 	require('Nvim-comment'),       -- Autopair
@@ -35,20 +34,6 @@ require("lazy").setup({
 	require('Lazygit'),
 	require('Neo-tree'),
 	require('LuaSnip'),
-	--	{ 'AckslD/nvim-neoclip.lua' },
-	--	{
-	--		'olrtg/nvim-emmet',
-	--		config = function()
-	--			vim.keymap.set({ "n", "v" }, '<leader>xe',
-	--				require('nvim-emmet').wrap_with_abbreviation)
-	--		end
-	--	},
---	{ 'mlaursen/vim-react-snippets' },
---	{ 'r5n-dev/vscode-react-javascript-snippets' },
---	{
---		"benfowler/telescope-luasnip.nvim",
---	 module = "telescope._extensions.luasnip", -- if you wish to lazy-load
---	},
 	--	{
 	--		'stevearc/conform.nvim',
 	--		opts = {},
@@ -57,14 +42,10 @@ require("lazy").setup({
 	--	{ 'nvim-lua/popup.nvim' },
 	--	{ 'crwebb85/telescope-media-files.nvim' },
 
-	--	-- LSP
 	--	{
 	--		'pmizio/typescript-tools.nvim',
 	--		dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
 	--		opts = {},
 	--	},
-	-- Autocompletion
---	{ 'L3MON4D3/LuaSnip' },
-	{ 'onsails/lspkind.nvim' },                        -- Icon vs code in Autocompletion
-	{ 'dinhhuy258/sfm.nvim', event = "VeryLazy" },     -- File explorer
+	{ 'onsails/lspkind.nvim' }, -- Icon vs code in Autocompletion
 })
