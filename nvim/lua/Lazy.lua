@@ -12,40 +12,35 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	require('Theme'), -- Colorscheme
-	require('Noice'), -- Completely replaces the UI
-	require('ChatGPT'),
+	require('Theme'),              -- Colorscheme
+	require('Noice'),              -- Completely replaces the UI
+	require('ChatGPT'),            -- ChatGPT
 	require('Which-key'),
-	require('Auto-save'), -- Auto save
-	require('Lualine'),   -- Status bar
-	require('Neoscroll'), -- Smooth scroll
-	require('Toggleterm'), -- Terminal
-	require('Pantran'),   -- Translate
-	require('Hop'),       -- Motion
-	-- require('Treesitter'),                                            -- Motion
-	--	require('Hydra'),                     --Custom mode
-	require('Colorizer'),          -- Highlighting color
+	require('Auto-save'),          -- Auto save
+	require('Lualine'),            -- Status bar
+	require('Neoscroll'),          -- Smooth scroll
+	require('Toggleterm'),         -- Terminal
+	require('Pantran'),            -- Translate
+	require('Hop'),                -- Motion
+	require('Treesitter'),         -- Motion
+	--require('Hydra'),              --Custom mode
+--	require('Colorizer'),          -- Highlighting color
 	require('Autoclose'),          -- Autopair
-	require('telescope/Telescope'), -- Autopair
-	require('Cmp'),                -- Autopair
+	require('telescope/Telescope'), -- Fuzzy finder
+	require('Cmp'),                -- Completion
 	require('Lsp'),                -- Autopair
 	require('Nvim-comment'),       -- Autopair
-	require('Confirm-quit'),
+	require('Confirm-quit'),       -- Smart quit
 	require('Lazygit'),
 	require('Neo-tree'),
 	require('LuaSnip'),
-	--	{
-	--		'stevearc/conform.nvim',
-	--		opts = {},
-	--	},
-	--	{ 'styled-components/vim-styled-components' },
-	--	{ 'nvim-lua/popup.nvim' },
-	--	{ 'crwebb85/telescope-media-files.nvim' },
+	require('Tabscope'),
+-- require('Cokeline'),
+-- { 'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
 
 	--	{
 	--		'pmizio/typescript-tools.nvim',
 	--		dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
 	--		opts = {},
 	--	},
-	{ 'onsails/lspkind.nvim' }, -- Icon vs code in Autocompletion
 })

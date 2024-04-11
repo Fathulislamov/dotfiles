@@ -1,14 +1,16 @@
---local which_key = require("which-key")
-local keymap = {
-	['<c-t>'] = { '<cmd>ToggleTerm<CR>', "Toggle terminal" },
-}
--- which_key.register(keymap)
---which_key.register(keymap, { mode = { "n", "t" } })
-
+local function config()
+	local which_key = require("which-key")
+	local keymap = {
+		['<c-t>'] = { '<cmd>ToggleTerm<CR>', "Toggle terminal" },
+	}
+	which_key.register(keymap)
+	which_key.register(keymap, { mode = { "n", "t" } })
+end
 return {
 	{
 		'akinsho/toggleterm.nvim',
 		version = "*",
+		init = config,
 		opts = { --[[ things you want to change go here]]
 
 			size = function(term)
@@ -26,7 +28,7 @@ return {
 			hide_numbers = true, -- hide the number column in toggleterm buffers
 			shade_filetypes = {},
 			shade_terminals = true,
-			shading_factor = 3,  -- the degree by which to darken to terminal colour, default: 1 for dark backgrounds, 3 for light
+			shading_factor = 3,    -- the degree by which to darken to terminal colour, default: 1 for dark backgrounds, 3 for light
 			start_in_insert = true,
 			insert_mappings = true, -- whether or not the open mapping applies in insert mode
 			terminal_mappings = true, -- whether or not the open mapping applies in the opened terminals

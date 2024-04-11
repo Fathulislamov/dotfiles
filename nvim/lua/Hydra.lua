@@ -52,7 +52,8 @@ local function config()
 end
 
 return {
-	'Frederick888/hydra.nvim',
+--	'Frederick888/hydra.nvim',
+	"nvimtools/hydra.nvim",
 	branch = "self",
-	opts = config
+	config = config
 }

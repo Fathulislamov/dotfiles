@@ -5,8 +5,8 @@ local function config()
 	lspconfig.tsserver.setup {}
 	lspconfig.html.setup {}
 	lspconfig.cssls.setup {}
-	lspconfig.prettier.setup {}
-	lspconfig.prettierd.setup {}
+	--	lspconfig.prettier.setup {}
+	--	lspconfig.prettierd.setup {}
 	lspconfig.emmet_language_server.setup {}
 	lspconfig.lua_ls.setup {
 		settings = {
@@ -114,5 +114,6 @@ return {
 			end
 		},
 		{ 'nvim-lua/lsp-status.nvim' }, -- Get stat us LSP
+		{ 'onsails/lspkind.nvim' },   -- Icon vs code in Autocompletion
 	}
 }

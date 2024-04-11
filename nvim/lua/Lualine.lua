@@ -67,14 +67,14 @@ return {
 			lualine_a = {
 				{
 					'mode',
-					fmt = function(mode)
-						--		if hydra.is_active() then
-						--			mode = hydra.get_name()
-					end
-					--					return mode
-					--				end,
-					--				separator = { left = '' },
-					--				right_padding = 2
+					--	fmt = function(mode)
+					--		if hydra.is_active() then
+					--			mode = hydra.get_name()
+					--		end
+					--		return mode
+					--	end,
+					---	separator = { left = '' },
+					--		right_padding = 2
 				},
 			},
 			lualine_b = { 'filename', 'branch', },

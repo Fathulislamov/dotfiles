@@ -51,11 +51,7 @@ local function config()
 	local which_key = require("which-key")
 	local keymap = {
 		["<Leader>"] = {
-			T = {
-				t = {"<cmd>Pantran<CR>", "Translate"},
-				h = 'g?',
-			},
-
+			T = { "<cmd>Pantran<CR>", "Translate | g? help" },
 		}
 	}
 	which_key.register(keymap)

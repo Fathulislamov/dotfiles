@@ -26,4 +26,4 @@ require("Lazy")       -- Plugin manager
 
 --require("lsp-status").config({})   -- Autopair
 
-require("keymap") -- Plugin manager
+--require("keymap") -- Plugin manager
