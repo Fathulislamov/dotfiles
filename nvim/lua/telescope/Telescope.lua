@@ -21,6 +21,7 @@ local function config()
 					},
 					n = {
 						--		["<esc>"] = actions.close,
+						--		
 						--		["<CR>"] = actions.select_default,
 						["h"] = actions.select_horizontal,
 						["v"] = actions.select_vertical,
@@ -100,6 +101,7 @@ return {
 	dependencies = {
 		require('telescope/Neoclip'),
 		require('telescope/TelescopeLuasnip'),
-		require('telescope/Media')
+		require('telescope/Media'),
+		require('telescope/Undo')
 	}
 } -- Fuzzy finder

@@ -1,7 +1,7 @@
 local function config()
 	local which_key = require("which-key")
 	local keymap = {
-		["<Leader>"] = {
+ 		["<Leader>"] = {
 			t = {
 				c = { ':Telescope neoclip initial_mode=normal<cr>', 'Clipboard' },
 			}

@@ -18,6 +18,23 @@ local function config()
 	})
 
 	Hydra({
+		name = 'CHANGE BUFFER',
+		mode = 'n',
+		body = '<Leader>b',
+		hint = [[ Change buffer ]],
+		config = {
+			foreign_keys = nil,
+			exit = true,
+			color = "pink",
+			--		hint = false,
+		},
+		heads = {
+			{ 'l', '<cmd>bprevious<CR>' },
+			{ 'h', '<cmd>bnext<CR>', { desc = '←/→' } },
+		}
+	})
+
+	Hydra({
 		name = 'RESIZE',
 		mode = 'n',
 		body = '<Leader>zr',
@@ -44,6 +61,11 @@ local function config()
 					name = 'Resize window',
 					h = 'Resize window left',
 					l = 'Resize window right',
+				},
+				b = {
+					name = 'Change buffer',
+					h = 'Next buffer',
+					l = 'Previous buffer',
 				}
 			}
 		}
@@ -52,7 +74,7 @@ local function config()
 end
 
 return {
---	'Frederick888/hydra.nvim',
+	--	'Frederick888/hydra.nvim',
 	"nvimtools/hydra.nvim",
 	branch = "self",
 	config = config

@@ -1,23 +1,5 @@
 local function config()
 	--@diagnostic disable: undefined-global
-	-- Setup language servers.
-	local lspconfig = require('lspconfig')
-	lspconfig.tsserver.setup {}
-	lspconfig.html.setup {}
-	lspconfig.cssls.setup {}
-	--	lspconfig.prettier.setup {}
-	--	lspconfig.prettierd.setup {}
-	lspconfig.emmet_language_server.setup {}
-	lspconfig.lua_ls.setup {
-		settings = {
-			Lua = {
-				diagnostics = {
-					-- Get the language server to recognize the `vim` global
-					globals = { 'vim' },
-				},
-			},
-		},
-	}
 	-- LspInfoBorderxxx
 	-- Global mappings.
 	-- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -61,6 +43,24 @@ local function config()
 		float = { border = "rounded" },
 	}
 
+	-- Setup language servers.
+	local lspconfig = require('lspconfig')
+	lspconfig.tsserver.setup {}
+	lspconfig.html.setup {}
+	lspconfig.cssls.setup {}
+	--	lspconfig.prettier.setup {}
+	--	lspconfig.prettierd.setup {}
+	lspconfig.emmet_language_server.setup {}
+	lspconfig.lua_ls.setup {
+		settings = {
+			Lua = {
+				diagnostics = {
+					-- Get the language server to recognize the `vim` global
+					globals = { 'vim' },
+				},
+			},
+		},
+	}
 	local which_key = require("which-key")
 	local keymap = {
 		["<Leader>"] = {
