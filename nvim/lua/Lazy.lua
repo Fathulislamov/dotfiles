@@ -22,9 +22,9 @@ require("lazy").setup({
 	require('Toggleterm'),         -- Terminal
 	require('Pantran'),            -- Translate
 	require('Hop'),                -- Motion
-	require('Treesitter'),         -- Motion
+--	require('Treesitter'),         -- Motion
 	--require('Hydra'),              --Custom mode
---	require('Colorizer'),          -- Highlighting color
+	require('Colorizer'),          -- Highlighting color
 	require('Autoclose'),          -- Autopair
 	require('telescope/Telescope'), -- Fuzzy finder
 	require('Cmp'),                -- Completion
@@ -35,8 +35,8 @@ require("lazy").setup({
 	require('Neo-tree'),
 	require('LuaSnip'),
 	require('Tabscope'),
--- require('Cokeline'),
--- { 'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
+	require('Cokeline'),
+	-- { 'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
 
 	--	{
 	--		'pmizio/typescript-tools.nvim',

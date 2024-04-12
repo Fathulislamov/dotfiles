@@ -115,5 +115,10 @@ return {
 		},
 		{ 'nvim-lua/lsp-status.nvim' }, -- Get stat us LSP
 		{ 'onsails/lspkind.nvim' },   -- Icon vs code in Autocompletion
+		{
+			'pmizio/typescript-tools.nvim',
+			dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+			opts = {},
+		},
 	}
 }
