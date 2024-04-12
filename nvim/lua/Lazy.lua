@@ -15,32 +15,24 @@ require("lazy").setup({
 	require('Theme'),              -- Colorscheme
 	require('Noice'),              -- Completely replaces the UI
 	require('ChatGPT'),            -- ChatGPT
-	require('Which-key'),
+	require('Which-key'),          -- Keymap
 	require('Auto-save'),          -- Auto save
 	require('Lualine'),            -- Status bar
 	require('Neoscroll'),          -- Smooth scroll
 	require('Toggleterm'),         -- Terminal
 	require('Pantran'),            -- Translate
 	require('Hop'),                -- Motion
---	require('Treesitter'),         -- Motion
+	require('Treesitter'),         -- Highlighting
 	--require('Hydra'),              --Custom mode
 	require('Colorizer'),          -- Highlighting color
 	require('Autoclose'),          -- Autopair
 	require('telescope/Telescope'), -- Fuzzy finder
 	require('Cmp'),                -- Completion
-	require('Lsp'),                -- Autopair
-	require('Nvim-comment'),       -- Autopair
+	require('Lsp'),                -- Language server
+	require('Nvim-comment'),       -- Comment
 	require('Confirm-quit'),       -- Smart quit
-	require('Lazygit'),
-	require('Neo-tree'),
-	require('LuaSnip'),
-	require('Tabscope'),
-	require('Cokeline'),
-	-- { 'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
-
-	--	{
-	--		'pmizio/typescript-tools.nvim',
-	--		dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
-	--		opts = {},
-	--	},
+	require('Lazygit'),            -- Git
+	require('Neo-tree'),           -- File explorer
+	require('LuaSnip'),            -- Snippets
+	require('Cokeline'),           -- Bufferline
 })
