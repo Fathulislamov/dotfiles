@@ -102,6 +102,7 @@ return {
 		require('telescope/Neoclip'),
 		require('telescope/TelescopeLuasnip'),
 		require('telescope/Media'),
-		require('telescope/Undo')
+		require('telescope/Undo'),
+		require('telescope/Tabs')
 	}
 } -- Fuzzy finder
