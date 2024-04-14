@@ -34,18 +34,21 @@ local bubbles_theme = {
 }
 
 local function lsp()
-	--	if require 'lsp-status'.status() ~= '' then
-	--		return "lsp working"
-	return '󰈖'
+	local status, lsp_status = pcall(require, 'lsp-status')
+	if status and lsp_status.status() ~= '' then
+		return '󰈖'
+	else
+		return "󰩋"
+	end
 end
---	return "󰩋"
---end
-
 
 
 return {
 	'nvim-lualine/lualine.nvim',
-	dependencies = { 'nvim-tree/nvim-web-devicons' },
+	dependencies = {
+		'nvim-tree/nvim-web-devicons',
+		'archibate/lualine-time'
+	},
 	opts = {
 		options = {
 			theme = bubbles_theme,
@@ -63,60 +66,41 @@ return {
 			always_divide_middle = true,
 		},
 		sections = {
-
 			lualine_a = {
-				{
-					'mode',
-					--	fmt = function(mode)
-					--		if hydra.is_active() then
-					--			mode = hydra.get_name()
-					--		end
-					--		return mode
-					--	end,
-					---	separator = { left = '' },
-					--		right_padding = 2
-				},
+				-- {
+				'mode',
+				--	fmt = function(mode)
+				--		if hydra.is_active() then
+				--			mode = hydra.get_name()
+				--		end
+				--		return mode
+				--	end,
+				---	separator = { left = '' },
+				--		right_padding = 2
+				-- },
 			},
-			lualine_b = { 'filename', 'branch', },
-			lualine_c = { lsp },
-			lualine_x = {
-				{
-					'tabs',
-					component_separators = { right = '', left = '' },
-					section_separators = { left = '', right = '' },
-					separator = { right = '', left = '' },
-					tabs_color = {
-						inactive = { fg = colors.white, bg = colors.grey },
-						active = { fg = colors.black, bg = colors.blue },
-					}
-				},
-				'%=                '
-			},
-			lualine_y = {
-				'filetype',
-				{
-					--	require 'lsp-status'.status() },
-					'progress' },
-				lualine_z = {
-					{ 'location', separator = { right = '' }, left_padding = 2 },
-				},
-			},
-			inactive_sections = {
-				lualine_a = {
-					{ 'filename', separator = { left = '' }, right_padding = 2 },
-				},
-				lualine_b = {},
-				lualine_c = {},
-				lualine_x = {},
-				lualine_y = {},
-				lualine_z = {
-					{ 'location', separator = { right = '' }, left_padding = 2 },
-				},
-			},
-			tabline = {},
-			winbar = {},
-			inactive_winbar = {},
-			extensions = {}
+			lualine_b = {'branch'},
+			lualine_c = {lsp, 'diagnostics'},
+			lualine_x = {'ctime'},
+			lualine_y = {},
+			lualine_z = {{ 'location', separator = { right = '' }, left_padding = 2 }},
 		},
-	}
+		inactive_sections = {
+			lualine_a = {
+				-- { 'filename', separator = { left = '' }, right_padding = 2 },
+			},
+			lualine_b = {},
+			lualine_c = {},
+			lualine_x = {},
+			lualine_y = {},
+			lualine_z = {
+				--		{ 'location', separator = { right = '' }, left_padding = 2 },
+			},
+		},
+		tabline = {},
+		winbar = {},
+		inactive_winbar = {},
+		extensions = {}
+	},
+	-- }
 }
