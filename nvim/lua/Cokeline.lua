@@ -136,7 +136,8 @@ local opts = {
 local function config()
 	local get_hex = require("cokeline.hlgroups").get_hl_attr
 	local tabs = require("cokeline.tabs")
-	local background = get_hex('ColorColumn', 'bg')
+	-- local background = get_hex('ColorColumn', 'bg')
+	local background = get_hex('TabLineSel', 'bg')
 
 	require('cokeline').setup({
 		default_hl = {
@@ -152,14 +153,17 @@ local function config()
 		},
 
 		components = {
-			{
-				text = ' ',
-				bg = background
-			},
+			-- {
+			-- 	text = ' ',
+			-- 	bg = get_hex('TabLineFill', 'bg'),
+			-- style = function(buffer)
+			-- 	return buffer.is_focused and 'bold' or nil
+			-- end,
+			-- },
 			{
 				text = '',
 				fg = background,
-				bg = get_hex('Normal', 'bg'),
+				bg = get_hex('TabLineFill', 'bg'),
 			},
 			{
 				text = function(buffer)
@@ -185,40 +189,75 @@ local function config()
 				text = '',
 				delete_buffer_on_left_click = true,
 				bg = background,
+				fg = '#ff6666'
 			},
 			{
 				text = '',
-				fg = background,
-				bg = get_hex('Normal', 'bg'),
+				-- fg = background,
+				fg = get_hex('Normal', 'bg'),
+				bg = get_hex('TabLineFill', 'bg'),
+			},
+			{
+				text = ' ',
+				bg = get_hex('TabLineFill', 'bg'),
 			},
 		},
 		tabs = {
 			placement = "right",
-			-- 	---@type Component[]
 			components = {
 				{
-					text = '',
-					fg = get_hex('ColorColumn', 'bg'),
-					bg = get_hex('Normal', 'bg'),
+					text = function(TabPage)
+						return TabPage.is_first and '' or ' '
+					end,
+					fg = background,
+					bg = function(TabPage)
+						local bg = nil
+						if TabPage.is_first then
+							bg = get_hex('TabLineFill', 'bg')
+						else
+							bg = background
+						end
+						return bg
+					end,
+					-- bg = get_hex('TabLineFill', 'bg'),
+					-- bg = background
 				},
-				-- {
-				-- 	text = function(buffer)
-				-- 		return buffer.devicon.icon
-				-- 	end,
-				-- 	fg = function(buffer)
-				-- 		return buffer.devicon.color
-				-- 	end,
-				-- },
 				{
 					text = function(TabPage)
 						return TabPage.number
 					end,
-					fg = get_hex('Normal', 'fg'),
+					fg = function(TabPage)
+						local fg = nil
+						if TabPage.is_active then
+							fg = get_hex('Normal', 'fg')
+						else
+							fg = nil
+						end
+						return fg
+					end,
+					bg = background
 				},
 				{
-					text = '',
-					fg = get_hex('ColorColumn', 'bg'),
-					bg = get_hex('Normal', 'bg'),
+					-- text = function(TabPage)
+					-- 	return TabPage.is_last and '' or ''
+					-- end,
+					-- -- fg = get_hex('ColorColumn', 'bg'),
+					-- fg = background,
+					-- bg = get_hex('Normal', 'bg'),
+					-- -- bg = background,
+					text = function(TabPage)
+						return TabPage.is_last and '' or ''
+					end,
+					fg = background,
+					bg = function(TabPage)
+						local bg = nil
+						if TabPage.is_last then
+							bg = get_hex('TabLineFill', 'bg')
+						else
+							bg = background
+						end
+						return bg
+					end,
 				},
 			}
 		},
