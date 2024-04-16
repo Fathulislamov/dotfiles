@@ -20,5 +20,4 @@ end
 return {
 	'tomasiser/vim-code-dark',
 	init = conf
-
 } -- Colorscheme

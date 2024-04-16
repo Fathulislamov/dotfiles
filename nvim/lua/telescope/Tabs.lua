@@ -1,8 +1,6 @@
 local function config()
 	require('telescope').load_extension 'telescope-tabs'
-	require('telescope-tabs').setup {
-		-- Your custom config :^)
-	}
+	require('telescope-tabs').setup {}
 
 	local which_key = require("which-key")
 	local keymap = {

@@ -1,6 +1,7 @@
 return {
 	'nvim-treesitter/nvim-treesitter',
 	build = ":TSUpdate",
+
 	opts = {
 		config = {
 
@@ -47,5 +48,3 @@ return {
 		}
 	}
 }
---require('./styledComponent').directives()
---require('./styledComponent').queries()

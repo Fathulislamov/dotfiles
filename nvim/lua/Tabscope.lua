@@ -1,5 +1,4 @@
 local function config()
-	-- Initialize tabscope
 	require("tabscope").setup({})
 
 	-- To remove tab local buffer, use remove_tab_buffer:

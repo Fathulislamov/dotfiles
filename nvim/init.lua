@@ -18,12 +18,9 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 cmd("set number! foldcolumn=1") -- Disable line-numbering
-cmd("syntax on")     -- Enable syntax highlighting
-cmd("syntax enable") -- Enable syntax highlighting
+cmd("syntax on")                -- Enable syntax highlighting
+cmd("syntax enable")            -- Enable syntax highlighting
 cmd("set signcolumn=no")
 
-require("Lazy")       -- Plugin manager
-
---require("lsp-status").config({})   -- Autopair
-
-require("keymap") -- Plugin manager
+require("Lazy")   -- Plugin manager
+require("keymap") -- Keymap
