@@ -24,7 +24,7 @@ require("lazy").setup({
 	require('Pantran'),            -- Translate
 	require('Hop'),                -- Motion
 	require('Treesitter'),         -- Highlighting
-	require('Hydra'),              --Custom mode
+	-- require('Hydra'),              --Custom mode
 	require('Colorizer'),          -- Highlighting color
 	require('Autoclose'),          -- Autopair
 	require('telescope/Telescope'), -- Fuzzy finder
@@ -35,5 +35,6 @@ require("lazy").setup({
 	require('Neo-tree'),           -- File explorer
 	require('LuaSnip'),            -- Snippets
 	require('Cokeline'),           -- Bufferline
+	require('Inkrename'),           -- Bufferline
 	-- require('Langmapper'),         -- Keymap fot diffrent lang
 })

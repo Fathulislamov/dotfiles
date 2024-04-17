@@ -92,12 +92,13 @@ local function config()
 				},
 				t = 'Type definition',
 				F = { '<cmd>Lspsaga finder <CR>', 'Finder' },
-				r = { '<cmd>Lspsaga rename <CR>', 'Rename'},
+				r = { ':IncRename', 'Rename'},
+				-- r = { '<cmd>Lspsaga rename <CR>', 'Rename'},
 				a = { '<cmd>Lspsaga code_action<CR>', 'Code action' },
 				n = 'References',
 				f = 'Format'
 			},
-		}
+		} 
 	}
 	which_key.register(keymap)
 end
