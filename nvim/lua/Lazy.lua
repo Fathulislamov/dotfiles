@@ -15,6 +15,7 @@ require("lazy").setup({
 	require('Theme'),              -- Colorscheme
 	require('Noice'),              -- Completely replaces the UI
 	require('ChatGPT'),            -- ChatGPT
+	require('Lsp'),                -- Language server
 	require('Which-key'),          -- Keymap
 	require('Auto-save'),          -- Auto save
 	require('Lualine'),            -- Status bar
@@ -28,12 +29,11 @@ require("lazy").setup({
 	require('Autoclose'),          -- Autopair
 	require('telescope/Telescope'), -- Fuzzy finder
 	require('Cmp'),                -- Completion
-	require('Lsp'),                -- Language server
 	require('Nvim-comment'),       -- Comment
 	require('Confirm-quit'),       -- Smart quit
 	require('Lazygit'),            -- Git
 	require('Neo-tree'),           -- File explorer
 	require('LuaSnip'),            -- Snippets
 	require('Cokeline'),           -- Bufferline
-	require('Langmapper'),         -- Keymap fot diffrent lang
+	-- require('Langmapper'),         -- Keymap fot diffrent lang
 })

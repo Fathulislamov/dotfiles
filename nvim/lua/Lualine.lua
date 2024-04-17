@@ -42,12 +42,12 @@ local function lsp()
 	end
 end
 
-
 return {
 	'nvim-lualine/lualine.nvim',
 	dependencies = {
 		'nvim-tree/nvim-web-devicons',
-		'archibate/lualine-time'
+		'archibate/lualine-time',
+		'nvimdev/lspsaga.nvim',
 	},
 	opts = {
 		options = {
@@ -79,11 +79,11 @@ return {
 				--		right_padding = 2
 				-- },
 			},
-			lualine_b = {'branch'},
-			lualine_c = {lsp, 'diagnostics'},
-			lualine_x = {'ctime'},
+			lualine_b = { 'branch' },
+			lualine_c = { lsp, 'diagnostics'},
+			lualine_x = { 'ctime' },
 			lualine_y = {},
-			lualine_z = {{ 'location', separator = { right = '' }, left_padding = 2 }},
+			lualine_z = { { 'location', separator = { right = '' }, left_padding = 2 } },
 		},
 		inactive_sections = {
 			lualine_a = {
