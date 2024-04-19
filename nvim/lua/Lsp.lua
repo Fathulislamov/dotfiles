@@ -92,13 +92,13 @@ local function config()
 				},
 				t = 'Type definition',
 				F = { '<cmd>Lspsaga finder <CR>', 'Finder' },
-				r = { ':IncRename', 'Rename'},
+				r = { ':IncRename', 'Rename' },
 				-- r = { '<cmd>Lspsaga rename <CR>', 'Rename'},
 				a = { '<cmd>Lspsaga code_action<CR>', 'Code action' },
 				n = 'References',
 				f = 'Format'
 			},
-		} 
+		}
 	}
 	which_key.register(keymap)
 end
@@ -156,6 +156,12 @@ return {
 				'nvim-treesitter/nvim-treesitter', -- optional
 				'nvim-tree/nvim-web-devicons'  -- optional
 			}
+		},
+		{
+			"smjonas/inc-rename.nvim",
+			config = function()
+				require("inc_rename").setup()
+			end,
 		}
 	}
 }
