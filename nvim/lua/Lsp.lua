@@ -79,8 +79,10 @@ local function config()
 				},
 				g = {
 					name = 'Go to',
-					d = { '<cmd>Lspsaga goto_definition <CR>', 'Peek definition' },
-					t = { '<cmd>Lspsaga goto_type_definition<CR>', 'Peek type definition' },
+					r = 'References',
+					i = 'Implenentation',
+					d = { '<cmd>Lspsaga goto_definition <CR>', 'Definition' },
+					t = { '<cmd>Lspsaga goto_type_definition<CR>', 'Type definition' },
 				},
 				h = { '<cmd>Lspsaga hover_doc<CR>', 'Displays information under the cursor' },
 				s = 'Signature',

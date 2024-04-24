@@ -79,7 +79,7 @@ return {
 				--		right_padding = 2
 				-- },
 			},
-			lualine_b = { 'branch' },
+			lualine_b = {'filename', 'branch' },
 			lualine_c = { lsp, 'diagnostics'},
 			lualine_x = { 'ctime' },
 			lualine_y = {},

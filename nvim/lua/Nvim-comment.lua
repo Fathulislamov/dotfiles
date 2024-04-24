@@ -25,8 +25,28 @@ return {
 			-- text object mapping, comment chunk,,
 			comment_chunk_text_object = "ic",
 			-- Hook function to call before commenting takes place
-			hook = nil
+			hook = function()
+				require('ts_context_commentstring').update_commentstring()
+			end,
 			--	}
 		})
-	end
+	end,
+	dependencies = {
+		'JoosepAlviste/nvim-ts-context-commentstring',
+		config = function()
+			require('ts_context_commentstring').setup {
+				languages = {
+					javascript = {
+						__default = '// %s',
+						jsx_element = '{/* %s */}',
+						jsx_fragment = '{/* %s */}',
+						jsx_attribute = '// %s',
+						comment = '// %s',
+					},
+					typescript = { __default = '// %s', __multiline = '/* %s */' },
+				},
+			}
+		end
+	}
+
 }

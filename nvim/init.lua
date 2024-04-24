@@ -24,3 +24,4 @@ cmd("set signcolumn=no")
 
 require("Lazy")   -- Plugin manager
 require("keymap") -- Keymap
+vim.opt.updatetime = 100 
