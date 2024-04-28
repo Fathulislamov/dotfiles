@@ -4,7 +4,6 @@ local function config()
 		api_host_cmd = 'echo -n https://api.vsegpt.ru'
 
 	})
-	local chatgpt = require("chatgpt")
 	local which_key = require("which-key")
 	local keymap = {
 		["<Leader>"] = {
