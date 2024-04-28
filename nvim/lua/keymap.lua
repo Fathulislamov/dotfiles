@@ -9,11 +9,11 @@ local key = {
 		dd          = { '"_d<cr>', "delete" },
 		s           = { '<esc>:w<cr>', "save" },
 		ch          = { ':nohlsearch<cr>', "clear the highlighting search" },
-		m           = {
-			name = "Move window",
-			i = { '<c-w>r<cr>', "move window left" },
-			o = { '<c-w>r<cr>', "move window right" },
-		},
+		-- m           = {
+		-- 	name = "Move window",
+		-- 	i = { '<c-w>r<cr>', "move window left" },
+		-- 	o = { '<c-w>r<cr>', "move window right" },
+		-- },
 		o           = { '<c-o>', 'jump to older cursor position' },
 		['<Tab>']   = { '<esc>:tabnext <cr>', "tab previous" },
 		['<S-Tab>'] = { '<esc>:tabprevious <cr>', "tab previous" },

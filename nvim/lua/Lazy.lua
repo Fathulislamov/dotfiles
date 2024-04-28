@@ -35,5 +35,6 @@ require("lazy").setup({
 	require('Neo-tree'),           -- File explorer
 	require('LuaSnip'),            -- Snippets
 	require('Cokeline'),           -- Bufferline
+	require('CodeShoot'),           -- Bufferline
 	-- require('Langmapper'),         -- Keymap fot diffrent lang
 })
