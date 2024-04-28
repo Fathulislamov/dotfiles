@@ -1,8 +1,8 @@
 local function config()
 	require("chatgpt").setup({
-		api_host_cmd = 'echo -n https://api.proxyapi.ru/openai'
+		-- api_host_cmd = 'echo -n https://api.proxyapi.ru/openai'
+		api_host_cmd = 'echo -n https://api.vsegpt.ru'
 
-		-- api_host_cmd = 'echo -n https://api.vsegpt.ru'
 	})
 	local chatgpt = require("chatgpt")
 	local which_key = require("which-key")
