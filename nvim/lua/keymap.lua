@@ -20,6 +20,7 @@ local key = {
 		u           = { '<esc>:set number!<cr>', "toggle line-numbering" },
 	},
 	['<F10>'] = { ':lua sourceAllConfigFiles()<CR>', 'Source all config files' },
+	['<F1>'] = { ':TermExec cmd="yarn start"<CR>', 'Yarn start' },
 }
 which_key.register(key)
 
