@@ -36,5 +36,6 @@ require("lazy").setup({
 	require('LuaSnip'),            -- Snippets
 	require('Cokeline'),           -- Bufferline
 	require('CodeShoot'),          -- Bufferline
+	require('DAP')
 	-- require('Langmapper'),         -- Keymap fot diffrent lang
 })
