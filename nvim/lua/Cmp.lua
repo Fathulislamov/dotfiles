@@ -64,6 +64,7 @@ local function config()
 		sources = cmp.config.sources({
 				{ name = 'nvim_lsp' },
 				{ name = 'luasnip' }, -- For luasnip users.
+				{ name = "codeium" }
 			},
 			{
 				{
@@ -110,6 +111,7 @@ local function config()
 					luasnip = "[LuaSnip]",
 					nvim_lua = "[Lua]",
 					latex_symbols = "[Latex]",
+					codeium = "[Codeium]",
 				}),
 				ellipsis_char = '...', -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead (must define maxwidth first)
 
