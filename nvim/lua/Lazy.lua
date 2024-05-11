@@ -37,6 +37,6 @@ require("lazy").setup({
 	require('Cokeline'),           -- Bufferline
 	require('CodeShoot'),          -- Bufferline
 	require('DAP'),
-	require('Codeium')
-	-- require('Langmapper'),         -- Keymap fot diffrent lang
+	require('Codeium'),
+	require('Langmapper'), -- Keymap fot diffrent lang
 })

@@ -5,7 +5,19 @@ return {
 	init = function()
 		vim.o.timeout = true
 		vim.o.timeoutlen = 300
+
+
+		local lmu = require('langmapper.utils')
+		local view = require('which-key.view')
+		local execute = view.execute
+		-- wrap `execute()` and translate sequence back
+		view.execute = function(prefix_i, mode, buf)
+			-- Translate back to English characters
+			prefix_i = lmu.translate_keycode(prefix_i, 'default', 'ru')
+			execute(prefix_i, mode, buf)
+		end
 	end,
+	dependencies = { 'Wansmer/langmapper.nvim' },
 	opts = {
 		plugins = {
 			marks = true,   -- shows a list of your marks on ' and `
@@ -59,6 +71,7 @@ return {
 			align = "left",                                                           -- align columns left, center or right
 		},
 		ignore_missing = false,                                                     -- enable this to hide mappings for which you didn't specify a label
+		-- ignore_missing = true,                                                    -- enable this to hide mappings for which you didn't specify a label
 		hidden = { "<silent>", "<cmd>", "<Cmd>", "<CR>", "call", "lua", "^:", "^ " }, -- hide mapping boilerplate
 		show_help = true,                                                           -- show help message on the command line when the popup is visible
 		show_keys = true,                                                           -- show the currently pressed key and its label as a message in the command line
@@ -83,3 +96,33 @@ return {
 	}
 
 }
+-- return {
+--   'folke/which-key.nvim',
+--   enabled = true,
+--   dependencies = { 'Wansmer/langmapper.nvim' },
+--   config = function()
+--     vim.o.timeout = true
+--     vim.o.timeoutlen = 300
+--
+--     local lmu = require('langmapper.utils')
+--     local view = require('which-key.view')
+--     local execute = view.execute
+--
+--     -- wrap `execute()` and translate sequence back
+--     view.execute = function(prefix_i, mode, buf)
+--       -- Translate back to English characters
+--       prefix_i = lmu.translate_keycode(prefix_i, 'default', 'ru')
+--       execute(prefix_i, mode, buf)
+--     end
+--
+--     -- If you want to see translated operators, text objects and motions in
+--     -- which-key prompt
+--     -- local presets = require('which-key.plugins.presets')
+--     -- presets.operators = lmu.trans_dict(presets.operators)
+--     -- presets.objects = lmu.trans_dict(presets.objects)
+--     -- presets.motions = lmu.trans_dict(presets.motions)
+--     -- etc
+--
+--     require('which-key').setup()
+--   end,
+-- }

@@ -112,6 +112,8 @@ local function config()
 					nvim_lua = "[Lua]",
 					latex_symbols = "[Latex]",
 					codeium = "[Codeium]",
+					-- codeium = ""
+					-- symbol_map = { Codeium = "", }
 				}),
 				ellipsis_char = '...', -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead (must define maxwidth first)
 
