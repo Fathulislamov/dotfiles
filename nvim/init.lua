@@ -12,7 +12,8 @@ set.fillchars = { eob = " " } -- Hide ~
 --set.mouse = "" -- Disable mouse
 set.showtabline = 0           -- Hide bufferline
 set.modifiable = true
---set.timeoutlen = 1000         --time to wait for a mapped sequence to complete
+set.clipboard ="unnamedplus"  -- Global clipboard
+-- set.timeoutlen = 1000         --time to wait for a mapped sequence to complete
 vim.wo.wrap = false
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
