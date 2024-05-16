@@ -24,4 +24,4 @@ cmd("syntax enable")            -- Enable syntax highlighting
 cmd("set signcolumn=no")
 
 require("Lazy")   -- Plugin manager
-require("keymap") -- Keymap
+-- require("keymap") -- Keymap

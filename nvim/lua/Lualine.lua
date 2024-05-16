@@ -79,8 +79,14 @@ return {
 				--		right_padding = 2
 				-- },
 			},
-			lualine_b = {'filename', 'branch' },
-			lualine_c = { lsp, 'diagnostics'},
+			lualine_b = {
+		--		{
+		--			require("noice").api.statusline.mode.get,
+		--			cond = require("noice").api.statusline.mode.has,
+		--			color = { fg = "#ff9e64" },
+		--		},
+				'filename', 'branch' },
+			lualine_c = { lsp, 'diagnostics' },
 			lualine_x = { 'ctime' },
 			lualine_y = {},
 			lualine_z = { { 'location', separator = { right = '' }, left_padding = 2 } },
