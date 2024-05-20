@@ -30,7 +30,7 @@ require("lazy").setup({
 	 require('telescope/Telescope'), -- Fuzzy finder
 	 require('Cmp'),                -- Completion
 	 require('Nvim-comment'),       -- Comment
-	 -- require('Confirm-quit'),       -- Smart quit
+	 require('Confirm-quit'),       -- Smart quit
 	 require('Lazygit'),            -- Git
 	 require('Neo-tree'),           -- File explorer
 	 require('LuaSnip'),            -- Snippets
