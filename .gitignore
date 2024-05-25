@@ -26,3 +26,4 @@ tree-sitter
 yarn
 nvim/lazy-lock.json
 libreoffice
+lazy-lock.json
