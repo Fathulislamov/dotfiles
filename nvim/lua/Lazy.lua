@@ -14,7 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	require('Theme'),              -- Colorscheme
 	require('Noice'),              -- Completely replaces the UI
- require('ChatGPT'),            -- ChatGPT
+ 	require('ChatGPT'),            -- ChatGPT
 	 require('Lsp'),                -- Language server
 	 require('Which-key'),          -- Keymap
 	 require('Auto-save'),          -- Auto save

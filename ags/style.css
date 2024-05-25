@@ -1,0 +1,35 @@
+/* $background: rgba(18, 18, 18, 0.7); */
+/* $background: #121212; */
+/* $foreground: #A9B1D6; */
+/*  */
+/* $textcolor: #BEC7DB; */
+
+
+/* button:active { */
+/*     background-color: @theme_selected_bg_color; */
+/* } */
+/*  */
+/* button:hover { */
+/*     border-bottom: 3px solid @theme_fg_color; */
+/* } */
+/*  */
+/* label { */
+/*     font-weight: bold; */
+/* } */
+/*  */
+/* .workspaces button.focused { */
+/*     border-bottom: 3px solid @theme_selected_bg_color; */
+/* } */
+/*  */
+/* .client-title { */
+/*     color: @theme_selected_bg_color; */
+/* } */
+/*  */
+/* .notification { */
+/*     color: yellow; */
+/* } */
+/*  */
+/* levelbar block, */
+/* highlight { */
+/*     min-height: 10px; */
+/* } */
