@@ -48,8 +48,9 @@ local function config()
 	-- lspconfig.tsserver.setup {}
 	lspconfig.html.setup {}
 	lspconfig.cssls.setup {}
-		lspconfig.prettier.setup {}
-		lspconfig.prettierd.setup {}
+	lspconfig.prettier.setup {}
+	lspconfig.prettierd.setup {}
+	lspconfig.bashls.setup {}
 	lspconfig.emmet_language_server.setup {}
 	lspconfig.lua_ls.setup {
 		settings = {

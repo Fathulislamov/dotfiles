@@ -1,35 +1,26 @@
-/* $background: rgba(18, 18, 18, 0.7); */
-/* $background: #121212; */
-/* $foreground: #A9B1D6; */
-/*  */
-/* $textcolor: #BEC7DB; */
+window.bar {
+  background-color: rgba(244, 244, 244, 0.1); }
 
+button {
+  all: unset; }
 
-/* button:active { */
-/*     background-color: @theme_selected_bg_color; */
-/* } */
-/*  */
-/* button:hover { */
-/*     border-bottom: 3px solid @theme_fg_color; */
-/* } */
-/*  */
-/* label { */
-/*     font-weight: bold; */
-/* } */
-/*  */
-/* .workspaces button.focused { */
-/*     border-bottom: 3px solid @theme_selected_bg_color; */
-/* } */
-/*  */
-/* .client-title { */
-/*     color: @theme_selected_bg_color; */
-/* } */
-/*  */
-/* .notification { */
-/*     color: yellow; */
-/* } */
-/*  */
-/* levelbar block, */
-/* highlight { */
-/*     min-height: 10px; */
-/* } */
+.workspaces {
+  padding: 2px 4px; }
+  .workspaces .workspace_button {
+    padding: 2px 10px;
+    font-size: 20px;
+    color: white;
+    border-radius: 5px; }
+
+.focused {
+  background-color: rgba(244, 244, 244, 0.4); }
+
+.client-title {
+  all: unset;
+  color: white;
+  font-size: 20px;
+  padding-bottom: 5px; }
+
+.battery-icon {
+  all: unset;
+  font-size: 20px; }
