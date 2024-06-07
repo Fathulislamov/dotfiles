@@ -6,6 +6,7 @@ local function config()
 	})
 	local which_key = require("which-key")
 	local keymap = {
+				 = { "<cmd>ChatGPT<CR>", "ChatGPT" },
 		["<Leader>"] = {
 			C = {
 				c = { "<cmd>ChatGPT<CR>", "ChatGPT" },
