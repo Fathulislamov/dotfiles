@@ -1,5 +1,6 @@
 const hyprland = await Service.import("hyprland")
 
+
 const activeId = hyprland.active.workspace.bind("id")
 const workspaces = hyprland.bind("workspaces").as(ws => filterAndSort(ws))
 

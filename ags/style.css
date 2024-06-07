@@ -24,3 +24,6 @@ button {
 .battery-icon {
   all: unset;
   font-size: 20px; }
+
+.my_test {
+  color: red; }
