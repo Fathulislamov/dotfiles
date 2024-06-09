@@ -1,19 +1,20 @@
 App.addIcons(`${App.configDir}/assets`)
 
-import { SysTray } from './components/Systray.js'
-import { Battery } from './components/Battery.js'
-import { Title } from './components/Title.js'
-import { Workspaces } from './components/Workspaces.js'
-import { Volume } from './components/Volume.js'
-import { Clock } from './components/Clock.js'
-import { Bluetooth } from './components/Bluetooth.js'
-import { Network } from './components/Network.js'
-import { Keyboard } from './components/Keyboard.js'
-import { cpuProgress } from './components/Cpu.js'
-import { Memory } from './components/Memory.js'
-import { Temp } from './components/Temp.js'
-import { Brightness } from './components/Brightness.js'
-import { BtnSetting, Settings } from './components/Settings.js'
+import { SysTray } from './components/Bar/Systray.js'
+import { Battery } from './components/Bar/Battery.js'
+import { Title } from './components/Bar/Title.js'
+import { Workspaces } from './components/Bar/Workspaces.js'
+// import { Volume } from './components/Bar/Volume.js'
+import { Clock } from './components/Bar/Clock.js'
+import { Bluetooth } from './components/Bar/Bluetooth.js'
+import { Network } from './components/Bar/Network.js'
+import { Keyboard } from './components/Bar/Keyboard.js'
+import { cpuProgress } from './components/Bar/Cpu.js'
+import { Memory } from './components/Bar/Memory.js'
+import { Temp } from './components/Bar/Temp.js'
+import { Brightness } from './components/Bar/Brightness.js'
+import { BtnSetting } from './components/Bar/BtnSettings.js'
+import { SystemMenu } from './components/SystemMenu/SystemMenu.js'
 // const notifications = await Service.import("notifications")
 // const mpris = await Service.import("mpris")
 //
@@ -69,7 +70,7 @@ App.config({
   style: './style.css',
   windows: [
     Bar(),
-    Settings()
+		SystemMenu()
   ]
 })
 
@@ -77,7 +78,7 @@ function Bar(monitor = 0) {
   return Widget.Window({
     name: `bar-${monitor}`, // name has to be unique
     class_name: "bar",
-    monitor,
+    // monitor,
     anchor: ["top", "left", "right"],
     exclusivity: "exclusive",
     child: Widget.CenterBox({
@@ -126,7 +127,6 @@ function Right() {
       Memory(),
       Network(),
       Bluetooth(),
-      Volume(),
       Battery(),
       Clock(),
       SysTray(),

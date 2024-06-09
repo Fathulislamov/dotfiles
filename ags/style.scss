@@ -1,6 +1,7 @@
 $textColor: white;
 
 window.bar {
+  // max-height: 20px;
   background-color: rgba(244, 244, 244, 0.1);
 }
 
@@ -35,10 +36,14 @@ button {
   all: unset;
   font-size: 20px;
 }
-.test {
-  // width:400px;
-  // height: 400px;
-}
-.my_test{
+
+// .test {
+// width:400px;
+// height: 400px;
+// }
+
+.my_test {
   color: red;
 }
+
+// @import "./components/System/SystemMenyStyle";
