@@ -1,5 +1,7 @@
 import brightness from './brightness.js';
 
+// import brightness from "./brightness.js"
+
 // export const Brightness = () => Widget.Slider({
 //   on_change: self => brightness.screen_value = self.value,
 //   value: brightness.bind('screen-value'),

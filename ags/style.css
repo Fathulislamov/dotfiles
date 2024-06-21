@@ -27,3 +27,11 @@ button {
 
 .my_test {
   color: red; }
+
+.bar_item {
+  margin-right: 10px;
+  font-size: 18px;
+  color: #E0E0E0; }
+
+.bar_btn {
+  margin-right: 15px; }

@@ -1,25 +1,25 @@
-const Bluetooth = await Service.import('bluetooth')
+const bluetooth = await Service.import('bluetooth')
 
-const BluetoothList = () => Widget.Box({
+export const Bluetooth = () => Widget.Box({
   hexpand: true,
   vertical: true,
 })
-  .hook(Bluetooth, box => {
+  .hook(bluetooth, box => {
     box.children = [
       Widget.Box({
         children: [
           Widget.Label({ label: 'Bluetooth' }),
           Widget.Switch({
-            active: Bluetooth.enabled,
+            active: bluetooth.enabled,
             onActivate: () => {
-              Bluetooth.enabled = !Bluetooth.enabled
+              bluetooth.enabled = !bluetooth.enabled
             }
           })]
       }),
       Widget.Revealer({
         transition: 'slide_right',
         child: Devices(),
-        reveal_child: Bluetooth.enabled,
+        reveal_child: bluetooth.enabled,
       })
     ];
   });
@@ -27,7 +27,7 @@ const BluetoothList = () => Widget.Box({
 const Devices = () => {
   return Widget.Box({
     vertical: true,
-    children: Bluetooth.devices.map(device => {
+    children: bluetooth.devices.map(device => {
       return Widget.Box({
         children: [
           Widget.Icon(device.icon_name + "-symbolic"),
@@ -50,4 +50,3 @@ const Devices = () => {
     })
   })
 }
-export default BluetoothList;
