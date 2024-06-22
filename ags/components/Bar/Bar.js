@@ -40,7 +40,6 @@ function Center() {
     spacing: 8,
     children: [
       Clock(),
-			// Speed()
     ],
   })
 }
@@ -51,6 +50,7 @@ function Right() {
     spacing: 8,
     children: [
       SysTray(),
+			Speed(),
       Temp(),
       CPU(),
       Memory(),

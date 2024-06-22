@@ -13,8 +13,7 @@ TX2=$(cat /sys/class/net/$INTERFACE/statistics/tx_bytes)
 RXBPS=$((RX2 - RX1))
 TXBPS=$((TX2 - TX1))
 # Преобразуем байты в килобайты
-RXKBPS=$(echo "scale=2; $RXBPS / 1024" | bc)
-TXKBPS=$(echo "scale=2; $TXBPS / 1024" | bc)
-echo "Текущая скорость загрузки: $RXKBPS KB/s"
-echo "Текущая скорость отдачи: $TXKBPS KB/s"
+RXKBPS=$(echo "scale=2; $RXBPS / 128" | bc)
+TXKBPS=$(echo "scale=2; $TXBPS / 128" | bc)
+echo "$RXKBPS $TXKBPS"
 
