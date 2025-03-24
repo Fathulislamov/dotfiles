@@ -3,7 +3,7 @@ configstore
 dconf
 Deskreen
 google-chrome
-gtk-3.0
+gtk*
 htop
 pulse
 QtProject
@@ -27,3 +27,16 @@ yarn
 nvim/lazy-lock.json
 libreoffice
 nvim/lazy-lock.json
+Docker Desktop
+Postman
+go
+kde.org
+nextjs-nodejs
+obs-studio
+pomotroid
+superfile/theme
+vlc
+yandex-browser
+elisarc
+user-dirs.dirs
+user-dirs.locale
