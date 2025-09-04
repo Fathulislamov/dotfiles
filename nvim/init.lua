@@ -1,6 +1,6 @@
 local cmd = vim.cmd -- execute vim commands
 local set = vim.opt -- global/buffer/windows-scoped options
-
+vim.opt.updatetime = 100
 set.number = true -- Enable line numbering
 set.tabstop = 2 -- Tab width setting
 set.shiftwidth = 2 -- Tab width setting
@@ -12,10 +12,11 @@ set.scrolloff = 8 -- Scroll offset
 set.fillchars = { eob = " " } -- Hide ~
 set.ignorecase = true -- Ignore case
 set.signcolumn = "no"
---set.mouse = "" -- Disable mouse
+set.mouse = "a" -- Enable mouse (visual mode)
+
 set.showtabline = 0 -- Hide bufferline
 set.modifiable = true
--- set.clipboard = "unnamedplus" -- Global clipboard
+set.clipboard = "unnamedplus" -- Global clipboard
 -- set.cc = "80" -- set an 80 column border for good coding style
 -- set.timeoutlen = 1000         --time to wait for a mapped sequence to complete
 set.undofile = true -- Enable support for undo files
@@ -33,3 +34,10 @@ vim.schedule(function()
 end)
 
 require("Utils/lazy") -- Plugin manager
+-- настройка автосворачивания имортов
+-- Добавьте в ваш конфиг:
+-- vim.opt.foldmethod = "expr"
+-- vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+-- vim.opt.foldlevel = 99 -- Автоматическое открытие фолдов при открытии файла
+-- Автоматическое управление номерами строк
+vim.api.nvim_create_augroup("toggle_line_numbers", { clear = true })

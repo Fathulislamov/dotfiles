@@ -1,0 +1,119 @@
+[2025-09-01 05:15:30.433] [info]  [store-node] init store, config path: /home/skai/.config/xyz.chatboxapp.app/config.json
+[2025-09-01 05:15:30.436] [error] [store-node] skip backup because config.json does not exist.
+[2025-09-01 05:15:30.992] [info]  [knowledge-base:index] [KB] Initializing knowledge base system...
+[2025-09-01 05:15:31.032] [info]  [knowledge-base:db] [DB] Database initialized (total_chunks column already exists)
+[2025-09-01 05:15:31.032] [info]  [knowledge-base:db] [DB] Database initialized
+[2025-09-01 05:15:31.033] [debug] [knowledge-base:db] [DB] Cleaning up processing files from previous session...
+[2025-09-01 05:15:31.033] [debug] [knowledge-base:index] [KB] Database initialized
+[2025-09-01 05:15:31.033] [debug] [knowledge-base:index] [KB] IPC handlers registered
+[2025-09-01 05:15:31.033] [info]  [knowledge-base:file-loaders] [FILE] Starting worker loop
+[2025-09-01 05:15:31.037] [debug] [knowledge-base:index] [KB] Worker loop started
+[2025-09-01 05:15:31.038] [info]  [knowledge-base:index] [KB] Knowledge base system initialized successfully in 46ms
+[2025-09-01 05:15:31.407] [info]  tray: created
+[2025-09-01 05:15:31.411] [info]  [app-updater] Checking for update
+[2025-09-01 05:15:31.412] [info]  [app-updater] Update timer started, checking every hour
+[2025-09-01 05:15:31.419] [info]  [app-updater] Generated new staging user ID: abbf148f-3dff-5b0b-93dd-edb8a3279d2f
+[2025-09-01 05:15:33.094] [info]  [app-updater] Update for version 1.15.4 is not available (latest version: 1.15.4, downgrade is disallowed).
+[2025-09-01 05:15:34.076] [info]  tray: destroyed
+[2025-09-01 05:15:34.086] [info]  tray: skip destroy because it does not exist
+[2025-09-01 05:15:41.158] [info]  [store-node] init store, config path: /home/skai/.config/xyz.chatboxapp.app/config.json
+[2025-09-01 05:15:41.663] [info]  [knowledge-base:index] [KB] Initializing knowledge base system...
+[2025-09-01 05:15:41.696] [info]  [knowledge-base:db] [DB] Database initialized (total_chunks column already exists)
+[2025-09-01 05:15:41.697] [info]  [knowledge-base:db] [DB] Database initialized
+[2025-09-01 05:15:41.697] [debug] [knowledge-base:db] [DB] Cleaning up processing files from previous session...
+[2025-09-01 05:15:41.697] [debug] [knowledge-base:index] [KB] Database initialized
+[2025-09-01 05:15:41.697] [debug] [knowledge-base:index] [KB] IPC handlers registered
+[2025-09-01 05:15:41.698] [info]  [knowledge-base:file-loaders] [FILE] Starting worker loop
+[2025-09-01 05:15:41.698] [debug] [knowledge-base:index] [KB] Worker loop started
+[2025-09-01 05:15:41.698] [info]  [knowledge-base:index] [KB] Knowledge base system initialized successfully in 35ms
+[2025-09-01 05:15:42.081] [info]  tray: created
+[2025-09-01 05:15:42.085] [info]  [app-updater] Checking for update
+[2025-09-01 05:15:42.085] [info]  [app-updater] Update timer started, checking every hour
+[2025-09-01 05:15:42.124] [info]  [store-node] backup config to: /home/skai/.config/xyz.chatboxapp.app/config-backup-2025-09-01T00_15_41.160Z.json
+[2025-09-01 05:15:42.124] [info]  [store-node] auto backup: /home/skai/.config/xyz.chatboxapp.app/config-backup-2025-09-01T00_15_41.160Z.json
+[2025-09-01 05:15:43.564] [debug] [knowledge-base:ipc-handlers] ipcMain: kb:list
+[2025-09-01 05:15:43.719] [info]  [app-updater] Update for version 1.15.4 is not available (latest version: 1.15.4, downgrade is disallowed).
+[2025-09-01 05:24:42.497] [debug] [knowledge-base:ipc-handlers] ipcMain: kb:list
+[2025-09-01 05:24:49.461] [debug] [knowledge-base:ipc-handlers] ipcMain: kb:list
+[2025-09-01 05:25:41.169] [info]  [store-node] backup config to: /home/skai/.config/xyz.chatboxapp.app/config-backup-2025-09-01T00_25_41.168Z.json
+[2025-09-01 05:25:41.169] [info]  [store-node] auto backup: /home/skai/.config/xyz.chatboxapp.app/config-backup-2025-09-01T00_25_41.168Z.json
+[2025-09-01 05:25:41.170] [info]  [store-node] Clearing 1 old backup(s)...
+[2025-09-01 05:25:41.171] [info]  [store-node] Finished clearing old backups.
+[2025-09-01 05:27:25.173] [debug] [knowledge-base:ipc-handlers] ipcMain: kb:list
+[2025-09-01 05:28:06.637] [debug] [knowledge-base:ipc-handlers] ipcMain: kb:list
+[2025-09-01 05:30:47.283] [debug] [knowledge-base:ipc-handlers] ipcMain: kb:list
+[2025-09-01 05:31:11.000] [debug] [knowledge-base:ipc-handlers] ipcMain: kb:list
+[2025-09-01 05:32:20.196] [debug] [knowledge-base:ipc-handlers] ipcMain: kb:list
+[2025-09-01 05:32:26.890] [debug] [knowledge-base:ipc-handlers] ipcMain: kb:list
+[2025-09-01 05:32:28.177] [debug] [knowledge-base:ipc-handlers] ipcMain: kb:list
+[2025-09-01 05:32:32.587] [debug] [knowledge-base:ipc-handlers] ipcMain: kb:list
+[2025-09-01 05:32:33.378] [debug] [knowledge-base:ipc-handlers] ipcMain: kb:list
+[2025-09-01 05:32:43.242] [debug] [knowledge-base:ipc-handlers] ipcMain: kb:list
+[2025-09-01 05:32:46.236] [debug] [knowledge-base:ipc-handlers] ipcMain: kb:list
+[2025-09-01 05:33:16.202] [debug] [knowledge-base:ipc-handlers] ipcMain: kb:list
+[2025-09-01 05:33:47.018] [debug] [knowledge-base:ipc-handlers] ipcMain: kb:list
+[2025-09-01 05:34:29.568] [debug] [knowledge-base:ipc-handlers] ipcMain: kb:list
+[2025-09-01 05:34:38.628] [debug] [knowledge-base:ipc-handlers] ipcMain: kb:list
+[2025-09-01 05:38:31.617] [debug] [knowledge-base:ipc-handlers] ipcMain: kb:list
+[2025-09-01 05:40:02.361] [debug] [knowledge-base:ipc-handlers] ipcMain: kb:list
+[2025-09-01 05:40:07.339] [debug] [knowledge-base:ipc-handlers] ipcMain: kb:list
+[2025-09-01 05:40:13.342] [debug] [knowledge-base:ipc-handlers] ipcMain: kb:list
+[2025-09-01 05:40:18.175] [debug] [knowledge-base:ipc-handlers] ipcMain: kb:list
+[2025-09-01 05:40:47.220] [debug] [knowledge-base:ipc-handlers] ipcMain: kb:list
+[2025-09-01 05:41:23.700] [debug] [knowledge-base:ipc-handlers] ipcMain: kb:list
+[2025-09-01 05:41:25.293] [debug] [knowledge-base:ipc-handlers] ipcMain: kb:list
+[2025-09-01 05:41:27.847] [debug] [knowledge-base:ipc-handlers] ipcMain: kb:list
+[2025-09-01 05:41:28.614] [debug] [knowledge-base:ipc-handlers] ipcMain: kb:list
+[2025-09-01 05:41:42.508] [debug] [knowledge-base:ipc-handlers] ipcMain: kb:list
+[2025-09-01 05:41:45.652] [debug] [knowledge-base:ipc-handlers] ipcMain: kb:list
+[2025-09-01 05:41:47.216] [debug] [knowledge-base:ipc-handlers] ipcMain: kb:list
+[2025-09-01 05:41:50.534] [debug] [knowledge-base:ipc-handlers] ipcMain: kb:list
+[2025-09-01 05:41:58.116] [debug] [knowledge-base:ipc-handlers] ipcMain: kb:list
+[2025-09-01 05:42:24.326] [debug] [knowledge-base:ipc-handlers] ipcMain: kb:list
+[2025-09-01 05:42:29.086] [debug] [knowledge-base:ipc-handlers] ipcMain: kb:list
+[2025-09-01 05:42:31.348] [debug] [knowledge-base:ipc-handlers] ipcMain: kb:list
+[2025-09-01 05:42:33.536] [debug] [knowledge-base:ipc-handlers] ipcMain: kb:list
+[2025-09-01 05:45:41.173] [info]  [store-node] backup config to: /home/skai/.config/xyz.chatboxapp.app/config-backup-2025-09-01T00_45_41.171Z.json
+[2025-09-01 05:45:41.173] [info]  [store-node] auto backup: /home/skai/.config/xyz.chatboxapp.app/config-backup-2025-09-01T00_45_41.171Z.json
+[2025-09-01 05:45:41.173] [info]  [store-node] Clearing 1 old backup(s)...
+[2025-09-01 05:45:41.174] [info]  [store-node] Finished clearing old backups.
+[2025-09-01 06:00:29.242] [debug] [knowledge-base:ipc-handlers] ipcMain: kb:list
+[2025-09-01 06:03:05.412] [debug] [knowledge-base:ipc-handlers] ipcMain: kb:list
+[2025-09-01 06:05:41.177] [info]  [store-node] backup config to: /home/skai/.config/xyz.chatboxapp.app/config-backup-2025-09-01T01_05_41.175Z.json
+[2025-09-01 06:05:41.177] [info]  [store-node] auto backup: /home/skai/.config/xyz.chatboxapp.app/config-backup-2025-09-01T01_05_41.175Z.json
+[2025-09-01 06:15:41.178] [info]  [store-node] backup config to: /home/skai/.config/xyz.chatboxapp.app/config-backup-2025-09-01T01_15_41.177Z.json
+[2025-09-01 06:15:41.179] [info]  [store-node] auto backup: /home/skai/.config/xyz.chatboxapp.app/config-backup-2025-09-01T01_15_41.177Z.json
+[2025-09-01 06:15:41.179] [info]  [store-node] Clearing 1 old backup(s)...
+[2025-09-01 06:15:41.180] [info]  [store-node] Finished clearing old backups.
+[2025-09-01 06:15:42.089] [info]  [app-updater] Checking for update
+[2025-09-01 06:15:43.820] [info]  [app-updater] Update for version 1.15.4 is not available (latest version: 1.15.4, downgrade is disallowed).
+[2025-09-01 06:35:41.181] [info]  [store-node] backup config to: /home/skai/.config/xyz.chatboxapp.app/config-backup-2025-09-01T01_35_41.179Z.json
+[2025-09-01 06:35:41.181] [info]  [store-node] auto backup: /home/skai/.config/xyz.chatboxapp.app/config-backup-2025-09-01T01_35_41.179Z.json
+[2025-09-01 06:35:41.181] [info]  [store-node] Clearing 1 old backup(s)...
+[2025-09-01 06:35:41.182] [info]  [store-node] Finished clearing old backups.
+[2025-09-01 06:39:35.132] [info]  tray: destroyed
+[2025-09-01 20:13:24.594] [info]  [store-node] init store, config path: /home/skai/.config/xyz.chatboxapp.app/config.json
+[2025-09-01 20:13:25.088] [info]  [knowledge-base:index] [KB] Initializing knowledge base system...
+[2025-09-01 20:13:25.126] [info]  [knowledge-base:db] [DB] Database initialized (total_chunks column already exists)
+[2025-09-01 20:13:25.126] [info]  [knowledge-base:db] [DB] Database initialized
+[2025-09-01 20:13:25.126] [debug] [knowledge-base:db] [DB] Cleaning up processing files from previous session...
+[2025-09-01 20:13:25.127] [debug] [knowledge-base:index] [KB] Database initialized
+[2025-09-01 20:13:25.127] [debug] [knowledge-base:index] [KB] IPC handlers registered
+[2025-09-01 20:13:25.127] [info]  [knowledge-base:file-loaders] [FILE] Starting worker loop
+[2025-09-01 20:13:25.127] [debug] [knowledge-base:index] [KB] Worker loop started
+[2025-09-01 20:13:25.127] [info]  [knowledge-base:index] [KB] Knowledge base system initialized successfully in 39ms
+[2025-09-01 20:13:25.572] [info]  tray: created
+[2025-09-01 20:13:25.576] [info]  [app-updater] Checking for update
+[2025-09-01 20:13:25.577] [info]  [app-updater] Update timer started, checking every hour
+[2025-09-01 20:13:25.630] [info]  [store-node] backup config to: /home/skai/.config/xyz.chatboxapp.app/config-backup-2025-09-01T15_13_24.597Z.json
+[2025-09-01 20:13:25.630] [info]  [store-node] auto backup: /home/skai/.config/xyz.chatboxapp.app/config-backup-2025-09-01T15_13_24.597Z.json
+[2025-09-01 20:13:26.975] [debug] [knowledge-base:ipc-handlers] ipcMain: kb:list
+[2025-09-01 20:13:27.284] [info]  [app-updater] Update for version 1.15.4 is not available (latest version: 1.15.4, downgrade is disallowed).
+[2025-09-01 20:13:27.286] [debug] [knowledge-base:ipc-handlers] ipcMain: kb:list
+[2025-09-01 20:13:31.426] [debug] [knowledge-base:ipc-handlers] ipcMain: kb:list
+[2025-09-01 20:14:48.527] [debug] [knowledge-base:ipc-handlers] ipcMain: kb:list
+[2025-09-01 20:23:24.608] [info]  [store-node] backup config to: /home/skai/.config/xyz.chatboxapp.app/config-backup-2025-09-01T15_23_24.607Z.json
+[2025-09-01 20:23:24.608] [info]  [store-node] auto backup: /home/skai/.config/xyz.chatboxapp.app/config-backup-2025-09-01T15_23_24.607Z.json
+[2025-09-01 20:23:24.608] [info]  [store-node] Clearing 1 old backup(s)...
+[2025-09-01 20:23:24.609] [info]  [store-node] Finished clearing old backups.
+[2025-09-01 20:41:38.002] [info]  tray: destroyed

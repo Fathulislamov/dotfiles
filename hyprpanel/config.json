@@ -598,5 +598,8 @@
   "theme.bar.buttons.workspaces.numbered_inactive_padding": "0.4em",
   "theme.bar.buttons.modules.microphone.enableBorder": false,
   "theme.bar.buttons.modules.storage.enableBorder": false,
-  "theme.bar.buttons.modules.updates.enableBorder": false
+  "theme.bar.buttons.modules.updates.enableBorder": false,
+  "bar.customModules.storage.paths": [
+    "/"
+  ]
 }

@@ -1,5 +1,6 @@
 local function config()
 	require("ts_context_commentstring").setup({
+		enable_autocmd = false,
 		languages = {
 			javascript = {
 				__default = "// %s",
@@ -8,7 +9,14 @@ local function config()
 				jsx_attribute = "// %s",
 				comment = "// %s",
 			},
-			typescript = { __default = "// %s", __multiline = "/* %s */" },
+			typescript = {
+				__default = "// %s",
+				jsx_element = "{/* %s */}",
+				jsx_fragment = "{/* %s */}",
+				jsx_attribute = "// %s",
+				comment = "// %s",
+				__multiline = "/* %s */",
+			},
 		},
 	})
 
