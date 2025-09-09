@@ -1,53 +1,54 @@
-return {
-	"yetone/avante.nvim",
-	-- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
-	-- ⚠️ must add this setting! ! !
-	build = "make",
-	event = "VeryLazy",
-	version = false, -- Never set this value to "*"! Never!
-	---@module 'avante'
-	---@type avante.Config
-	opts = {
-		-- add any opts here
-		-- this file can contain specific instructions for your project
-		system_prompt = "You are a helpful assistant who speaks Russian. Пожалуйста, отвечай на русском языке.",
-		debug = true,
+local function config()
+	require("avante").setup({
+		-- system_prompt = "You are a helpful assistant who speaks Russian. Пожалуйста, отвечай на русском языке.",
+		-- debug = true,
 		instructions_file = "avante.md",
-		-- for example
 		windows = {
 			position = "left",
+		},
+		behaviour = {
+			auto_set_highlight_group = true,
+			auto_set_keymaps = false,
+			auto_apply_diff_after_generation = false,
+			support_paste_from_clipboard = false,
+			minimize_diff = true, -- Сокращать diff, удаляя неизменённые строки при применении блока кода
+			enable_token_counting = true, -- Включать подсчёт токенов. По умолчанию true.
+			auto_approve_tool_permissions = false, -- По умолчанию: показывать запросы на разрешения для всех инструментов
+			-- Примеры:
+			-- auto_approve_tool_permissions = true,                -- Автоодобрение всех инструментов (без запросов)
+			-- auto_approve_tool_permissions = {"bash", "replace_in_file"}, -- Автоодобрение конкретных инструментов
 		},
 		provider = "openai",
 		providers = {
 			openai = {
 				endpoint = "https://api.vsegpt.ru/v1",
 				model = "openai/gpt-5-nano",
+				-- disabled_tools = { "attempt_completion" },
 				timeout = 30000, -- Timeout in milliseconds
+				use_ReAct_prompt = true,
 				extra_request_body = {
 					temperature = 0.75,
-					max_tokens = 400000,
-				},
-			},
-			claude = {
-				endpoint = "https://api.anthropic.com",
-				model = "claude-sonnet-4-20250514",
-				timeout = 30000, -- Timeout in milliseconds
-				extra_request_body = {
-					temperature = 0.75,
-					max_tokens = 20480,
-				},
-			},
-			moonshot = {
-				endpoint = "https://api.moonshot.ai/v1",
-				model = "kimi-k2-0711-preview",
-				timeout = 30000, -- Timeout in milliseconds
-				extra_request_body = {
-					temperature = 0.75,
-					max_tokens = 32768,
+					max_tokens = 4000,
 				},
 			},
 		},
-	},
+	})
+	local which_key = require("which-key")
+	local keymap = {
+		{ "<leader>na", "<cmd>NoNeckPain<CR><cmd>AvanteToggle<CR><cmd>NoNeckPain<CR>", desc = "Toggle Avante" },
+		{ "<leader>e", "<cmd>AvanteEdit<CR>", desc = "Avante edit", mode = { "v" } },
+		{ "<leader>a", "<cmd>NoNeckPain<CR><cmd>AvanteAsk<CR>", desc = "Avante ask", mode = { "v" } },
+	}
+
+	which_key.add(keymap)
+end
+
+return {
+	"yetone/avante.nvim",
+	build = "make",
+	event = "VeryLazy",
+	version = false, -- Never set this value to "*"! Never!
+	config = config,
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"MunifTanjim/nui.nvim",
