@@ -38,6 +38,7 @@ local function config()
 		{ "<Leader>tm", "<cmd>Telescope man_page initial_mode=normal<cr>", desc = "Man" },
 		{ "<Leader>to", "<cmd>Telescope oldfiles initial_mode=normal<cr>", desc = "Oldfiles" },
 		{ "<Leader>ts", ":Telescope luasnip<cr>", desc = "Snippets" },
+		{ "<Leader>tn", ":Telescope notify<cr>", desc = "Notifications" },
 		-- { "<Leader>tt", "<cmd>Telescope tags<cr>", desc = "Tags" },
 	}
 	which_key.add(keymap, { mode = { "n", "v" } })

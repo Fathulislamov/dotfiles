@@ -18,6 +18,6 @@ return {
 	config = config,
 	dependencies = {
 		"MunifTanjim/nui.nvim",
-		"rcarriga/nvim-notify",
+		require("UI/notify"),
 	},
 }
