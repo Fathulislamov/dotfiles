@@ -4,7 +4,7 @@ vim.api.nvim_set_keymap("n", "q", "<Nop>", { noremap = true, silent = true })
 
 local which_key = require("which-key")
 local key = {
-	{ "<leader>l", "<c-w>l<cr>", desc = "Switch cursor right" },
+	{ "<leader>l", "<c-w>l<cr>", desc = "Switch cursor right" }, -- Switch cursor right
 	{ "<leader>h", "<c-w>h<cr>", desc = "Switch cursor left" },
 	{ "<leader>j", "<c-w>j<cr>", desc = "Switch cursor down" },
 	{ "<leader>k", "<c-w>k<cr>", desc = "Switch cursor up" },

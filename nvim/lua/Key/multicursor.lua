@@ -1,4 +1,4 @@
-local config = function()
+local function config()
 	local mc = require("multicursor-nvim")
 	mc.setup()
 	mc.addKeymapLayer(function(layerSet)
@@ -13,7 +13,8 @@ local config = function()
 
 	local which_key = require("which-key")
 	local key = {
-		{ "<c-leftmouse>", ":lua require('multicursor-nvim').handleMouse()<CR>", desc = "Toggle cursor" },
+		{ "<c-leftmouse>", ':lua require("multicursor-nvim").handleMouse()<cr>', desc = "Toggle cursor" },
+		{ "<leader>mm", ':lua require("multicursor-nvim").toggleCursor()<cr>', desc = "Toggle cursor" },
 	}
 	which_key.add(key)
 end

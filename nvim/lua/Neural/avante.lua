@@ -9,35 +9,29 @@ local function config()
 		behaviour = {
 			auto_set_highlight_group = true,
 			auto_set_keymaps = false,
-			auto_apply_diff_after_generation = false,
-			support_paste_from_clipboard = false,
-			minimize_diff = true, -- Сокращать diff, удаляя неизменённые строки при применении блока кода
-			enable_token_counting = true, -- Включать подсчёт токенов. По умолчанию true.
-			auto_approve_tool_permissions = false, -- По умолчанию: показывать запросы на разрешения для всех инструментов
-			-- Примеры:
-			-- auto_approve_tool_permissions = true,                -- Автоодобрение всех инструментов (без запросов)
-			-- auto_approve_tool_permissions = {"bash", "replace_in_file"}, -- Автоодобрение конкретных инструментов
 		},
 		provider = "openai",
 		providers = {
 			openai = {
 				endpoint = "https://api.vsegpt.ru/v1",
-				model = "openai/gpt-5-nano",
-				-- disabled_tools = { "attempt_completion" },
+				model = "openai/gpt-3.5-turbo",
 				timeout = 30000, -- Timeout in milliseconds
-				use_ReAct_prompt = true,
 				extra_request_body = {
 					temperature = 0.75,
 					max_tokens = 4000,
 				},
 			},
 		},
+		web_search_engine = {
+			provider = "google", -- tavily, serpapi, google, kagi, brave, or searxng
+			-- proxy = nil, -- proxy support, e.g., http://127.0.0.1:7890
+		},
 	})
 	local which_key = require("which-key")
 	local keymap = {
 		{ "<leader>na", "<cmd>NoNeckPain<CR><cmd>AvanteToggle<CR><cmd>NoNeckPain<CR>", desc = "Toggle Avante" },
-		{ "<leader>e", "<cmd>AvanteEdit<CR>", desc = "Avante edit", mode = { "v" } },
-		{ "<leader>a", "<cmd>NoNeckPain<CR><cmd>AvanteAsk<CR>", desc = "Avante ask", mode = { "v" } },
+		{ "<leader>ae", "<cmd>AvanteEdit<CR>", desc = "Avante edit", mode = { "v" } },
+		{ "<leader>aa", "<cmd>NoNeckPain<CR><cmd>AvanteAsk<CR>", desc = "Avante ask", mode = { "v" } },
 	}
 
 	which_key.add(keymap)
