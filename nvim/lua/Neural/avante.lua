@@ -17,7 +17,7 @@ local function config()
 				model = "openai/gpt-3.5-turbo",
 				timeout = 30000, -- Timeout in milliseconds
 				extra_request_body = {
-					temperature = 0.75,
+					temperature = 0.3,
 					max_tokens = 4000,
 				},
 			},
