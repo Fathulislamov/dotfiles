@@ -1,3 +1,6 @@
-2025/09/01-20:13:25.453 8ffa Reusing MANIFEST /home/skai/.config/xyz.chatboxapp.app/Local Storage/leveldb/MANIFEST-000001
-2025/09/01-20:13:25.455 8ffa Recovering log #3
-2025/09/01-20:13:25.456 8ffa Reusing old log /home/skai/.config/xyz.chatboxapp.app/Local Storage/leveldb/000003.log 
+2025/09/16-23:22:05.962 46c1 Reusing MANIFEST /home/skai/.config/xyz.chatboxapp.app/Local Storage/leveldb/MANIFEST-000001
+2025/09/16-23:22:05.964 46c1 Recovering log #10
+2025/09/16-23:22:05.964 46c1 Reusing old log /home/skai/.config/xyz.chatboxapp.app/Local Storage/leveldb/000010.log 
+2025/09/16-23:26:53.833 46c1 Level-0 table #15: started
+2025/09/16-23:26:53.836 46c1 Level-0 table #15: 21201 bytes OK
+2025/09/16-23:26:53.838 46c1 Delete type=0 #10

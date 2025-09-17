@@ -1,7 +1,7 @@
 local function config()
-	vim.diagnostic.config({
-		float = { border = "rounded" },
-	})
+	-- vim.diagnostic.config({
+	-- 	float = { border = "rounded" },
+	-- })
 
 	-- Setup language servers.
 	local lspconfig = require("lspconfig")
