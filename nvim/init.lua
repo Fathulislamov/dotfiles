@@ -1,28 +1,27 @@
-local cmd = vim.cmd -- execute vim commands
-local set = vim.opt -- global/buffer/windows-scoped options
+local cmd = vim.cmd           -- execute vim commands
+local set = vim.opt           -- global/buffer/windows-scoped options
 vim.opt.updatetime = 100
-set.number = true -- Enable line numbering
-set.tabstop = 2 -- Tab width setting
-set.shiftwidth = 2 -- Tab width setting
-set.smarttab = true -- Tab width setting
-set.expandtab = false -- Tab width setting
-set.swapfile = false -- Disable swap file creation
-set.termguicolors = true -- Sets 256 colors
-set.scrolloff = 8 -- Scroll offset
+set.number = true             -- Enable line numbering
+set.tabstop = 2               -- Tab width setting
+set.shiftwidth = 2            -- Tab width setting
+set.smarttab = true           -- Tab width setting
+set.expandtab = false         -- Tab width setting
+set.swapfile = false          -- Disable swap file creation
+set.termguicolors = true      -- Sets 256 colors
+set.scrolloff = 8             -- Scroll offset
 set.fillchars = { eob = " " } -- Hide ~
-set.ignorecase = true -- Ignore case
+set.ignorecase = true         -- Ignore case
 set.signcolumn = "no"
-set.mouse = "a" -- Enable mouse (visual mode)
-
-set.showtabline = 0 -- Hide bufferline
+set.mouse = "a"               -- Enable mouse (visual mode)
+set.showtabline = 0           -- Hide bufferline
 set.modifiable = true
 set.clipboard = "unnamedplus" -- Global clipboard
 -- set.cc = "80" -- set an 80 column border for good coding style
 -- set.timeoutlen = 1000         --time to wait for a mapped sequence to complete
-set.undofile = true -- Enable support for undo files
+set.undofile = true                                -- Enable support for undo files
 set.undodir = os.getenv("HOME") .. "/.vim/undodir" -- Specify the path to the directory for storing undo files
-set.undolevels = 1000 -- Set the maximum number of undo levels
-set.undoreload = 10000 -- Set the maximum number of lines for reloading
+set.undolevels = 1000                              -- Set the maximum number of undo levels
+set.undoreload = 10000                             -- Set the maximum number of lines for reloading
 vim.wo.wrap = false
 
 vim.schedule(function()
@@ -32,7 +31,6 @@ vim.schedule(function()
 	--	cmd("syntax enable") -- Enable syntax highlighting
 	--cmd("set signcolumn=no")
 end)
-
 require("Utils/lazy") -- Plugin manager
 -- настройка автосворачивания имортов
 -- Добавьте в ваш конфиг:

@@ -31,7 +31,12 @@ local function config()
 	local keymap = {
 		{ "<leader>na", "<cmd>NoNeckPain<CR><cmd>AvanteToggle<CR><cmd>NoNeckPain<CR>", desc = "Toggle Avante" },
 		{ "<leader>ae", "<cmd>AvanteEdit<CR>", desc = "Avante edit", mode = { "v" } },
-		{ "<leader>aa", "<cmd>NoNeckPain<CR><cmd>AvanteAsk<CR>", desc = "Avante ask", mode = { "v" } },
+		{
+			"<leader>aa",
+			"<cmd>NoNeckPain<CR><cmd>AvanteAsk<CR><cmd>NoNeckPain<CR>",
+			desc = "Avante ask",
+			mode = { "v" },
+		},
 	}
 
 	which_key.add(keymap)
