@@ -6,37 +6,37 @@ local function config()
 	-- Setup language servers.
 	local lspconfig = require("lspconfig")
 	lspconfig.ts_ls.setup({
-		on_attach = function(client, bufnr)
-			-- Включить inlay hints при подключении LSP
-			vim.lsp.inlay_hint.enable(bufnr, true)
-		end,
-		settings = {
-			typescript = {
-				inlayHints = {
-					includeInlayParameterNameHints = 'all',
-					includeInlayParameterNameHintsWhenArgumentMatchesName = true,
-					includeInlayFunctionParameterTypeHints = true,
-					includeInlayVariableTypeHints = true,
-					includeInlayPropertyDeclarationTypeHints = true,
-					includeInlayFunctionLikeReturnTypeHints = true,
-					includeInlayEnumMemberValueHints = true,
-				}
-			},
-			javascript = {
-				inlayHints = {
-					includeInlayParameterNameHints = 'all',
-					includeInlayParameterNameHintsWhenArgumentMatchesName = true,
-					includeInlayFunctionParameterTypeHints = true,
-					includeInlayVariableTypeHints = true,
-					includeInlayPropertyDeclarationTypeHints = true,
-					includeInlayFunctionLikeReturnTypeHints = true,
-					includeInlayEnumMemberValueHints = true,
-				}
-			}
-		},
-		inlay_hints = {
-      enabled = true,
-    },
+		-- on_attach = function(client, bufnr)
+		-- 	-- Включить inlay hints при подключении LSP
+		-- 	vim.lsp.inlay_hint.enable(bufnr, true)
+		-- end,
+		-- settings = {
+		-- 	typescript = {
+		-- 		inlayHints = {
+		-- 			includeInlayParameterNameHints = 'all',
+		-- 			includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+		-- 			includeInlayFunctionParameterTypeHints = true,
+		-- 			includeInlayVariableTypeHints = true,
+		-- 			includeInlayPropertyDeclarationTypeHints = true,
+		-- 			includeInlayFunctionLikeReturnTypeHints = true,
+		-- 			includeInlayEnumMemberValueHints = true,
+		-- 		}
+		-- 	},
+		-- 	javascript = {
+		-- 		inlayHints = {
+		-- 			includeInlayParameterNameHints = 'all',
+		-- 			includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+		-- 			includeInlayFunctionParameterTypeHints = true,
+		-- 			includeInlayVariableTypeHints = true,
+		-- 			includeInlayPropertyDeclarationTypeHints = true,
+		-- 			includeInlayFunctionLikeReturnTypeHints = true,
+		-- 			includeInlayEnumMemberValueHints = true,
+		-- 		}
+		-- 	}
+		-- },
+		-- inlay_hints = {
+		--       enabled = true,
+		--     },
 	})
 	lspconfig.html.setup({})
 	lspconfig.cssls.setup({})
