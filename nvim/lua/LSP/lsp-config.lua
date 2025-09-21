@@ -55,16 +55,16 @@ local function config()
 			},
 		},
 		inlay_hints = {
-      enabled = true,
-    },
+			enabled = true,
+		},
 	})
 	lspconfig.tailwindcss.setup({})
 	lspconfig.biome.setup({})
 
 	local which_key = require("which-key")
 	local keymap = {
-		{ "<Leader>a",   group = "LSP" },
-		{ "<Leader>aw",  group = "Workspace" },
+		{ "<Leader>a", group = "LSP" },
+		{ "<Leader>aw", group = "Workspace" },
 		{ "<Leader>awa", vim.lsp.buf.add_workspace_folder, desc = "Add Folder" },
 		{
 			"<Leader>awr",
@@ -102,15 +102,10 @@ local function config()
 			vim.lsp.buf.implementation,
 			desc = "Implementation",
 		},
-		{
-			"<Leader>ags",
-			vim.lsp.buf.signature_help,
-			desc = "Signature Help",
-		},
-		{ "<Leader>agr", vim.lsp.buf.references,  desc = "References" },
-		{ "<Leader>an",  desc = "References" },
-		{ "<Leader>as",  desc = "Signature" },
-		{ "<Leader>at",  desc = "Type definition" },
+		-- { "<Leader>agr", vim.lsp.buf.references,  desc = "References" },
+		-- { "<Leader>an", desc = "References" },
+		{ "<Leader>as", desc = "Signature" },
+		{ "<Leader>at", desc = "Type definition" },
 	}
 	which_key.add(keymap)
 end

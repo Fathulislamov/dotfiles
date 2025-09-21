@@ -3,7 +3,7 @@ return {
 	require("LSP/lsp-config"),
 	require("LSP/rename"),
 	require("LSP/lsp-saga"),
-	-- require("LSP/lsp-signature"),
+	require("LSP/lsp-signature"),
 	-- require("LSP/signup"),
 	require("LSP/mason"),
 	require("LSP/lspui"),
