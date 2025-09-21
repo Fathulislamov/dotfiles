@@ -5,88 +5,24 @@ return {
 		require("LspUI").setup({
 			-- General settings
 			prompt = {
-				border = true,
+				border = false,
 				borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
 			},
 
-			-- Code Action configuration
 			code_action = {
 				enable = false,
-				command_enable = true,
-				gitsigns = false,
-				extend_gitsigns = false,
-				ui = {
-					title = "Code Action",
-					border = "rounded",
-					winblend = 0,
-				},
-				keys = {
-					quit = "q",
-					exec = "<CR>",
-				},
 			},
-
-			-- Hover configuration
 			hover = {
-				enable = true,
-				command_enable = true,
-				ui = {
-					title = "Hover",
-					border = "rounded",
-					winblend = 0,
-				},
-				keys = {
-					quit = "q",
-				},
+				enable = false,
 			},
-
-			-- Rename configuration
 			rename = {
-				enable = true,
-				command_enable = true,
-				auto_save = false,
-				ui = {
-					title = "Rename",
-					border = "rounded",
-					winblend = 0,
-				},
-				keys = {
-					quit = "<C-c>",
-					exec = "<CR>",
-				},
+				enable = false,
 			},
-
-			-- Diagnostic configuration
 			diagnostic = {
-				enable = true,
-				command_enable = true,
-				ui = {
-					title = "Diagnostic",
-					border = "rounded",
-					winblend = 0,
-				},
-				keys = {
-					quit = "q",
-					exec = "<CR>",
-				},
+				enable = false,
 			},
-
-			-- Definition configuration
 			definition = {
-				enable = true,
-				command_enable = true,
-				ui = {
-					title = "Definition",
-					border = "rounded",
-					winblend = 0,
-				},
-				keys = {
-					quit = "q",
-					exec = "<CR>",
-					vsplit = "v",
-					split = "s",
-					tabe = "t",
-				},
+				enable = false,
 			},
 
 			-- Reference configuration
@@ -106,97 +42,21 @@ return {
 					tabe = "t",
 				},
 			},
-
-			-- Implementation configuration
 			implementation = {
-				enable = true,
-				command_enable = true,
-				ui = {
-					title = "Implementation",
-					border = "rounded",
-					winblend = 0,
-				},
-				keys = {
-					quit = "q",
-					exec = "<CR>",
-					vsplit = "v",
-					split = "s",
-					tabe = "t",
-				},
+				enable = false,
 			},
-
-			-- Type Definition configuration
 			type_definition = {
-				enable = true,
-				command_enable = true,
-				ui = {
-					title = "Type Definition",
-					border = "rounded",
-					winblend = 0,
-				},
-				keys = {
-					quit = "q",
-					exec = "<CR>",
-					vsplit = "v",
-					split = "s",
-					tabe = "t",
-				},
+				enable = false,
 			},
-
-			-- Declaration configuration
 			declaration = {
-				enable = true,
-				command_enable = true,
-				ui = {
-					title = "Declaration",
-					border = "rounded",
-					winblend = 0,
-				},
-				keys = {
-					quit = "q",
-					exec = "<CR>",
-					vsplit = "v",
-					split = "s",
-					tabe = "t",
-				},
+				enable = false,
 			},
-
-			-- Call Hierarchy configuration
 			call_hierarchy = {
-				enable = true,
-				command_enable = true,
-				ui = {
-					title = "Call Hierarchy",
-					border = "rounded",
-					winblend = 0,
-				},
-				keys = {
-					quit = "q",
-					exec = "<CR>",
-					expand = "o",
-					jump = "e",
-					vsplit = "v",
-					split = "s",
-					tabe = "t",
-				},
+				enable = false,
 			},
-
-			-- Lightbulb configuration
 			lightbulb = {
-				enable = true,
-				command_enable = true,
-				icon = "💡",
-				action_kind = {
-					QuickFix = "🔧",
-					Refactor = "♻️",
-					RefactorExtract = "📤",
-					RefactorInline = "📥",
-					RefactorRewrite = "✏️",
-					Source = "📄",
-					SourceOrganizeImports = "📦",
-				},
+				enable = false,
 			},
-
 			-- Inlay Hint configuration
 			inlay_hint = {
 				enable = true,
