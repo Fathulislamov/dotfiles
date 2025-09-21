@@ -21,7 +21,7 @@ local function conf()
 		cmd("highlight WinSeparator  guifg=#1e1e1e")
 	end)
 
-	cmd("colorscheme codedark")
+	-- cmd("colorscheme codedark")
 end
 
 return {

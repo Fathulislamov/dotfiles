@@ -16,7 +16,7 @@ set.mouse = "a" -- Enable mouse (visual mode)
 set.showtabline = 0 -- Hide bufferline
 set.modifiable = true
 set.clipboard = "unnamedplus" -- Global clipboard
--- set.cc = "80" -- set an 80 column border for good coding style
+set.cc = "80" -- set an 80 column border for good coding style
 -- set.timeoutlen = 1000         --time to wait for a mapped sequence to complete
 set.undofile = true -- Enable support for undo files
 set.undodir = os.getenv("HOME") .. "/.vim/undodir" -- Specify the path to the directory for storing undo files
@@ -25,7 +25,7 @@ set.undoreload = 10000 -- Set the maximum number of lines for reloading
 vim.wo.wrap = false
 
 vim.schedule(function()
-	cmd("autocmd BufEnter * set fo-=c")
+	-- cmd("autocmd BufEnter * set fo-=c")
 	--	cmd("set number! foldcolumn=1") -- Disable line-numbering
 	--	cmd("syntax on")    -- Enable syntax highlighting
 	--	cmd("syntax enable") -- Enable syntax highlighting
@@ -38,4 +38,4 @@ require("Utils/lazy") -- Plugin manager
 -- vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 -- vim.opt.foldlevel = 99 -- Автоматическое открытие фолдов при открытии файла
 -- Автоматическое управление номерами строк
-vim.api.nvim_create_augroup("toggle_line_numbers", { clear = true })
+-- vim.api.nvim_create_augroup("toggle_line_numbers", { clear = true })
