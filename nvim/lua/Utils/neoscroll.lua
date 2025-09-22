@@ -9,12 +9,12 @@ local function config()
 		{ group = "Scroll" },
 		{
 			"J",
-			":lua require('neoscroll').scroll(0.3, { move_cursor = true, duration = 300 })<cr>",
+			"<cmd>lua require('neoscroll').scroll(0.3, { move_cursor = true, duration = 300 })<cr>",
 			desc = "Scroll down",
 		},
 		{
 			"K",
-			":lua require('neoscroll').scroll(-0.3, { move_cursor = true, duration = 300 })<cr>",
+			"<cmd>lua require('neoscroll').scroll(-0.3, { move_cursor = true, duration = 300 })<cr>",
 			desc = "Scroll up",
 		},
 	}
