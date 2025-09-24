@@ -11,6 +11,7 @@ end
 
 return {
 	"LukasPietzschmann/telescope-tabs",
+	event = "VeryLazy",
 	config = config,
 	dependencies = { "nvim-telescope/telescope.nvim" },
 }

@@ -26,8 +26,8 @@ end
 
 return {
 	"shortcuts/no-neck-pain.nvim",
-	-- version = "*",
-	version = "v1.4.1",
+	version = "*",
+	-- version = "v1.4.1",
 	lazy = false,
 	config = config,
 }

@@ -13,9 +13,8 @@ local function config()
 	which_key.add(keymap)
 end
 return {
-	{
-		"akinsho/toggleterm.nvim",
-		version = "*",
-		config = config,
-	},
+	"akinsho/toggleterm.nvim",
+	event = "VeryLazy",
+	version = "*",
+	config = config,
 }

@@ -60,6 +60,7 @@ end
 return {
 	"L3MON4D3/LuaSnip",
 	tag = "v2.*",
+	event = { "BufReadPre", "BufNewFile" },
 	config = config,
 	dependencies = {
 		"rafamadriz/friendly-snippets",

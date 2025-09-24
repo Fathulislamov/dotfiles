@@ -19,5 +19,6 @@ local config = function()
 end
 return {
 	"hrsh7th/cmp-cmdline",
+	event = { "VeryLazy" },
 	config = config,
 }

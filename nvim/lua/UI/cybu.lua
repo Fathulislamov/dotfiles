@@ -36,6 +36,7 @@ return {
 	"ghillb/cybu.nvim",
 	branch = "main",
 	config = config,
+	event = "VeryLazy",
 	dependencies = {
 		"nvim-tree/nvim-web-devicons",
 		"nvim-lua/plenary.nvim",

@@ -9,6 +9,6 @@ end
 
 return {
 	"yutkat/confirm-quit.nvim",
-	event = "CmdlineEnter",
+	event = "VeryLazy",
 	config = config,
 }

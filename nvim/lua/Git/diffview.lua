@@ -11,5 +11,6 @@ local config = function()
 end
 return {
 	"sindrets/diffview.nvim",
+	event = "VeryLazy",
 	config = config,
 }

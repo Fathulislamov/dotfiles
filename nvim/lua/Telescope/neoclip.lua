@@ -16,6 +16,7 @@ end
 
 return {
 	"AckslD/nvim-neoclip.lua",
+	event = "VeryLazy",
 	config = config,
 	dependencies = {
 		{ "kkharji/sqlite.lua", module = "sqlite" },

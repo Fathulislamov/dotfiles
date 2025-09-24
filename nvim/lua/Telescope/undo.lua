@@ -9,5 +9,6 @@ local function config(_, opts)
 end
 return {
 	"debugloop/telescope-undo.nvim",
+	event = "VeryLazy",
 	config = config,
 }

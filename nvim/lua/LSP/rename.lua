@@ -14,5 +14,6 @@ end
 return {
 	"smjonas/inc-rename.nvim",
 	config = config,
+	event = "VeryLazy",
 	dependencies = { "noice.nvim" },
 }

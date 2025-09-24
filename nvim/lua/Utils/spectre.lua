@@ -15,6 +15,6 @@ end
 return {
 	"chrisgrieser/nvim-rip-substitute",
 	cmd = "RipSubstitute",
-	lazy = false,
+	event = "VeryLazy",
 	config = config,
 }

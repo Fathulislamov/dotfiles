@@ -72,5 +72,6 @@ end
 return {
 	"jinzhongjia/LspUI.nvim",
 	branch = "main",
+	event = "LspAttach",
 	config = config,
 }

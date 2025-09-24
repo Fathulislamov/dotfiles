@@ -9,5 +9,6 @@ end
 
 return {
 	"SergioRibera/cmp-dotenv",
+	event = { "BufReadPre", "BufNewFile" },
 	config = config,
 }

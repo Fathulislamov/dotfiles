@@ -66,7 +66,7 @@ return {
 		"stevearc/dressing.nvim", -- для провайдера ввода dressing
 		"folke/snacks.nvim", -- для провайдера ввода snacks
 		"nvim-tree/nvim-web-devicons", -- или echasnovski/mini.icons
-		"zbirenbaum/copilot.lua", -- for providers='copilot'
+		-- "zbirenbaum/copilot.lua", -- for providers='copilot'
 		{
 			-- support for image pasting
 			"HakonHarnes/img-clip.nvim",

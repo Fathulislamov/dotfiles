@@ -37,6 +37,7 @@ end
 return {
 	"piersolenski/wtf.nvim",
 	config = config,
+	event = "VeryLazy",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"MunifTanjim/nui.nvim",

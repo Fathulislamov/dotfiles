@@ -8,8 +8,8 @@ end
 
 return {
 	"kdheepak/lazygit.nvim",
-	lazy = false,
 	config = config,
+	event = "VeryLazy",
 	cmd = {
 		"LazyGit",
 		"LazyGitConfig",
