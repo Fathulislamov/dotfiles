@@ -49,6 +49,7 @@ local config = function()
 			expand = function(args)
 				luasnip.lsp_expand(args.body)
 				luasnip.filetype_extend("javascript", { "javascriptreact" })
+				luasnip.filetype_extend("typescript", { "typescriptreact" })
 				luasnip.filetype_extend("javascript", { "html" })
 			end,
 			mapping = current_mapping,

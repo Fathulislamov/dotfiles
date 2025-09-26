@@ -8,7 +8,6 @@ local config = function()
 end
 
 return {
-
 	"hrsh7th/cmp-path",
 	event = { "BufReadPre", "BufNewFile" },
 	config = config,

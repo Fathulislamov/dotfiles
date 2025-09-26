@@ -21,4 +21,7 @@ return {
 	"hrsh7th/cmp-cmdline",
 	event = { "VeryLazy" },
 	config = config,
+	dependencies = {
+		require("CMP/cmp-buffer"),
+	},
 }

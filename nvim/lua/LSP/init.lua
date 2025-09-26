@@ -9,9 +9,9 @@ return {
 	require("LSP/lspui"),
 	-- require("LSP/lens"),
 	-- require("LSP/inlay-hints"),
-	require("LSP/mason-lspconfig"),
+	-- require("LSP/mason-lspconfig"),
 	-- require("LSP/inline-diagnostic"),
-	require("LSP/tailwind-tools"),
+	-- require("LSP/tailwind-tools"),
 	require("LSP/trouble"),
 	-- require("LSP/inlay-hint"),
 }

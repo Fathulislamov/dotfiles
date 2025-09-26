@@ -9,4 +9,5 @@ return {
 	require("Utils/nesting"),
 	require("Utils/bad-practices"),
 	require("Utils/spectre"),
+	require("Utils/overseer"),
 }
