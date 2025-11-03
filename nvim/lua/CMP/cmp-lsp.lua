@@ -11,7 +11,7 @@ local config = function()
 	local lspconfig = require("lspconfig")
 	local available_servers = lspconfig.util.available_servers()
 	for _, server in ipairs(available_servers) do
-		lspconfig[server].setup({
+		vim.lsp.config(server, {
 			capabilities = capabilities,
 		})
 	end
@@ -19,5 +19,6 @@ end
 
 return {
 	"hrsh7th/cmp-nvim-lsp",
+	event = { "BufReadPre", "BufNewFile" },
 	config = config,
 }

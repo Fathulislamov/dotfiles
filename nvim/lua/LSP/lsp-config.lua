@@ -1,70 +1,39 @@
 local function config()
 	-- vim.diagnostic.config({
 	-- 	float = { border = "rounded" },
-	-- })
+	-- vim.diagnostic.config({
+	--   virtual_text = false,
+	--   signs = true,
+	--   update_in_insert = false,
+	--   underline = true,
+	-- })- })
 
 	-- Setup language servers.
-	local lspconfig = require("lspconfig")
-	lspconfig.ts_ls.setup({
-		-- on_attach = function(client, bufnr)
-		-- 	-- Включить inlay hints при подключении LSP
-		-- 	vim.lsp.inlay_hint.enable(bufnr, true)
-		-- end,
-		-- settings = {
-		-- 	typescript = {
-		-- 		inlayHints = {
-		-- 			includeInlayParameterNameHints = 'all',
-		-- 			includeInlayParameterNameHintsWhenArgumentMatchesName = true,
-		-- 			includeInlayFunctionParameterTypeHints = true,
-		-- 			includeInlayVariableTypeHints = true,
-		-- 			includeInlayPropertyDeclarationTypeHints = true,
-		-- 			includeInlayFunctionLikeReturnTypeHints = true,
-		-- 			includeInlayEnumMemberValueHints = true,
-		-- 		}
-		-- 	},
-		-- 	javascript = {
-		-- 		inlayHints = {
-		-- 			includeInlayParameterNameHints = 'all',
-		-- 			includeInlayParameterNameHintsWhenArgumentMatchesName = true,
-		-- 			includeInlayFunctionParameterTypeHints = true,
-		-- 			includeInlayVariableTypeHints = true,
-		-- 			includeInlayPropertyDeclarationTypeHints = true,
-		-- 			includeInlayFunctionLikeReturnTypeHints = true,
-		-- 			includeInlayEnumMemberValueHints = true,
-		-- 		}
-		-- 	}
-		-- },
-		-- inlay_hints = {
-		--       enabled = true,
-		--     },
-	})
-	lspconfig.html.setup({})
-	lspconfig.cssls.setup({})
-	lspconfig.bashls.setup({})
-	lspconfig.emmet_language_server.setup({})
-	lspconfig.hyprls.setup({})
-	lspconfig.lua_ls.setup({
-		settings = {
-			Lua = {
-				diagnostics = {
-					globals = { "vim" },
-				},
-				hint = {
-					enable = true,
-				},
-			},
-		},
+	--local lspconfig = require("lspconfig")
+	local servers = {
+		"html",
+		"cssls",
+		"bashls",
+		"emmet_ls",
+		"hyprls",
+		"lua_ls",
+		"ts_ls",
+		"tailwindcss",
+		"biome",
+	}
+	vim.lsp.config("*", {
+		-- on_attach = on_attach,
+		-- capabilities = capabilities,
 		inlay_hints = {
-      enabled = true,
-    },
+			enabled = true,
+		},
 	})
-	lspconfig.tailwindcss.setup({})
-	lspconfig.biome.setup({})
-
+	vim.lsp.enable(servers)
+	-- , settings = { typescript = { inlayHints = { includeInlayParameterNameHints = 'all', includeInlayParameterNameHintsWhenArgumentMatchesName = true, includeInlayFunctionParameterTypeHints = true, includeInlayVariableTypeHints = true, includeInlayPropertyDeclarationTypeHints = true, includeInlayFunctionLikeReturnTypeHints = true, includeInlayEnumMemberValueHints = true, }, }, javascript = { inlayHints = { includeInlayParameterNameHints = 'all', includeInlayParameterNameHintsWhenArgumentMatchesName = true, includeInlayFunctionParameterTypeHints = true, includeInlayVariableTypeHints = true, includeInlayPropertyDeclarationTypeHints = true, includeInlayFunctionLikeReturnTypeHints = true, includeInlayEnumMemberValueHints = true, }, }, }, inlay_hints = { enabled = true, }, })
 	local which_key = require("which-key")
 	local keymap = {
-		{ "<Leader>a",   group = "LSP" },
-		{ "<Leader>aw",  group = "Workspace" },
+		{ "<Leader>a", group = "LSP" },
+		{ "<Leader>aw", group = "Workspace" },
 		{ "<Leader>awa", vim.lsp.buf.add_workspace_folder, desc = "Add Folder" },
 		{
 			"<Leader>awr",
@@ -102,20 +71,16 @@ local function config()
 			vim.lsp.buf.implementation,
 			desc = "Implementation",
 		},
-		{
-			"<Leader>ags",
-			vim.lsp.buf.signature_help,
-			desc = "Signature Help",
-		},
-		{ "<Leader>agr", vim.lsp.buf.references,  desc = "References" },
-		{ "<Leader>an",  desc = "References" },
-		{ "<Leader>as",  desc = "Signature" },
-		{ "<Leader>at",  desc = "Type definition" },
+		-- { "<Leader>agr", vim.lsp.buf.references,  desc = "References" },
+		-- { "<Leader>an", desc = "References" },
+		{ "<Leader>as", desc = "Signature" },
+		{ "<Leader>at", desc = "Type definition" },
 	}
 	which_key.add(keymap)
 end
 
 return {
 	"neovim/nvim-lspconfig",
+	event = { "BufReadPre", "BufNewFile" },
 	config = config,
 }

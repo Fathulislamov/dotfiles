@@ -23,6 +23,7 @@ end
 return {
 	"Exafunction/codeium.nvim",
 	config = config,
+	event = { "BufReadPre", "BufNewFile" },
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"hrsh7th/nvim-cmp",

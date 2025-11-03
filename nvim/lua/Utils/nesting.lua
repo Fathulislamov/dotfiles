@@ -37,5 +37,6 @@ end
 return {
 	"saifulapm/neotree-file-nesting-config",
 	config = config,
+	event = "BufEnter",
 	dependencies = { "nvim-neo-tree/neo-tree.nvim" },
 }

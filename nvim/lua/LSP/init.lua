@@ -1,9 +1,9 @@
 return {
-	-- require("LSP/conform"),
+	require("LSP/conform"),
 	require("LSP/lsp-config"),
-	-- require("LSP/rename"),
+	require("LSP/rename"),
 	require("LSP/lsp-saga"),
-	-- require("LSP/lsp-signature"),
+	require("LSP/lsp-signature"),
 	-- require("LSP/signup"),
 	require("LSP/mason"),
 	require("LSP/lspui"),
@@ -12,6 +12,6 @@ return {
 	-- require("LSP/mason-lspconfig"),
 	-- require("LSP/inline-diagnostic"),
 	-- require("LSP/tailwind-tools"),
-	-- require("LSP/trouble"),
+	require("LSP/trouble"),
 	-- require("LSP/inlay-hint"),
 }

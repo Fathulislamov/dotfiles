@@ -23,10 +23,11 @@ local function config()
 	require("nvim_comment").setup({
 		create_mappings = false,
 		hook = function()
-			require("ts_context_commentstring").update_commentstring()
+			if package.loaded["ts_context_commentstring"] then
+				require("ts_context_commentstring").update_commentstring()
+			end
 		end,
 	})
-
 	local which_key = require("which-key")
 	local keymap = {
 		{ "<Leader>c", ":CommentToggle<cr>", desc = "comment", mode = { "n", "v" } },
@@ -36,6 +37,7 @@ end
 
 return {
 	"terrortylor/nvim-comment",
+	event = "VeryLazy",
 	config = config,
 	dependencies = {
 		"JoosepAlviste/nvim-ts-context-commentstring",

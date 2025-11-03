@@ -19,5 +19,9 @@ local config = function()
 end
 return {
 	"hrsh7th/cmp-cmdline",
+	event = { "CmdlineEnter" },
 	config = config,
+	dependencies = {
+		require("CMP/cmp-buffer"),
+	},
 }

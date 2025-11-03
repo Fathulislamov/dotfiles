@@ -1,227 +1,77 @@
+local function config()
+	require("LspUI").setup({
+		-- General settings
+		prompt = {
+			border = false,
+			borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
+		},
+
+		code_action = {
+			enable = false,
+		},
+		hover = {
+			enable = false,
+		},
+		rename = {
+			enable = false,
+		},
+		diagnostic = {
+			enable = false,
+		},
+		definition = {
+			enable = false,
+		},
+
+		-- Reference configuration
+		reference = {
+			enable = true,
+			command_enable = true,
+			ui = {
+				title = "Reference",
+				border = "rounded",
+				winblend = 0,
+			},
+			keys = {
+				quit = "q",
+				exec = "<CR>",
+				vsplit = "v",
+				split = "s",
+				tabe = "t",
+			},
+		},
+		implementation = {
+			enable = false,
+		},
+		type_definition = {
+			enable = false,
+		},
+		declaration = {
+			enable = false,
+		},
+		call_hierarchy = {
+			enable = false,
+		},
+		lightbulb = {
+			enable = false,
+		},
+		inlay_hint = {
+			enable = false,
+		},
+		signature = {
+			enable = false,
+		},
+	})
+
+	local which_key = require("which-key")
+	local keymap = {
+		{ "<Leader>an", "<cmd>LspUI reference<CR>", desc = "references" },
+	}
+	which_key.add(keymap)
+end
+
 return {
 	"jinzhongjia/LspUI.nvim",
 	branch = "main",
-	config = function()
-		require("LspUI").setup({
-			-- General settings
-			prompt = {
-				border = true,
-				borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
-			},
-
-			-- Code Action configuration
-			code_action = {
-				enable = false,
-				command_enable = true,
-				gitsigns = false,
-				extend_gitsigns = false,
-				ui = {
-					title = "Code Action",
-					border = "rounded",
-					winblend = 0,
-				},
-				keys = {
-					quit = "q",
-					exec = "<CR>",
-				},
-			},
-
-			-- Hover configuration
-			hover = {
-				enable = true,
-				command_enable = true,
-				ui = {
-					title = "Hover",
-					border = "rounded",
-					winblend = 0,
-				},
-				keys = {
-					quit = "q",
-				},
-			},
-
-			-- Rename configuration
-			rename = {
-				enable = true,
-				command_enable = true,
-				auto_save = false,
-				ui = {
-					title = "Rename",
-					border = "rounded",
-					winblend = 0,
-				},
-				keys = {
-					quit = "<C-c>",
-					exec = "<CR>",
-				},
-			},
-
-			-- Diagnostic configuration
-			diagnostic = {
-				enable = true,
-				command_enable = true,
-				ui = {
-					title = "Diagnostic",
-					border = "rounded",
-					winblend = 0,
-				},
-				keys = {
-					quit = "q",
-					exec = "<CR>",
-				},
-			},
-
-			-- Definition configuration
-			definition = {
-				enable = true,
-				command_enable = true,
-				ui = {
-					title = "Definition",
-					border = "rounded",
-					winblend = 0,
-				},
-				keys = {
-					quit = "q",
-					exec = "<CR>",
-					vsplit = "v",
-					split = "s",
-					tabe = "t",
-				},
-			},
-
-			-- Reference configuration
-			reference = {
-				enable = true,
-				command_enable = true,
-				ui = {
-					title = "Reference",
-					border = "rounded",
-					winblend = 0,
-				},
-				keys = {
-					quit = "q",
-					exec = "<CR>",
-					vsplit = "v",
-					split = "s",
-					tabe = "t",
-				},
-			},
-
-			-- Implementation configuration
-			implementation = {
-				enable = true,
-				command_enable = true,
-				ui = {
-					title = "Implementation",
-					border = "rounded",
-					winblend = 0,
-				},
-				keys = {
-					quit = "q",
-					exec = "<CR>",
-					vsplit = "v",
-					split = "s",
-					tabe = "t",
-				},
-			},
-
-			-- Type Definition configuration
-			type_definition = {
-				enable = true,
-				command_enable = true,
-				ui = {
-					title = "Type Definition",
-					border = "rounded",
-					winblend = 0,
-				},
-				keys = {
-					quit = "q",
-					exec = "<CR>",
-					vsplit = "v",
-					split = "s",
-					tabe = "t",
-				},
-			},
-
-			-- Declaration configuration
-			declaration = {
-				enable = true,
-				command_enable = true,
-				ui = {
-					title = "Declaration",
-					border = "rounded",
-					winblend = 0,
-				},
-				keys = {
-					quit = "q",
-					exec = "<CR>",
-					vsplit = "v",
-					split = "s",
-					tabe = "t",
-				},
-			},
-
-			-- Call Hierarchy configuration
-			call_hierarchy = {
-				enable = true,
-				command_enable = true,
-				ui = {
-					title = "Call Hierarchy",
-					border = "rounded",
-					winblend = 0,
-				},
-				keys = {
-					quit = "q",
-					exec = "<CR>",
-					expand = "o",
-					jump = "e",
-					vsplit = "v",
-					split = "s",
-					tabe = "t",
-				},
-			},
-
-			-- Lightbulb configuration
-			lightbulb = {
-				enable = true,
-				command_enable = true,
-				icon = "💡",
-				action_kind = {
-					QuickFix = "🔧",
-					Refactor = "♻️",
-					RefactorExtract = "📤",
-					RefactorInline = "📥",
-					RefactorRewrite = "✏️",
-					Source = "📄",
-					SourceOrganizeImports = "📦",
-				},
-			},
-
-			-- Inlay Hint configuration
-			inlay_hint = {
-				enable = true,
-				command_enable = true,
-			},
-
-			-- Signature Help configuration
-			signature = {
-				enable = true,
-				icon = "", -- icon for
-				color = { -- color for virtual text
-					fg = "#5A5A5A",
-					bg = nil,
-				},
-				debounce = 300, -- debounce delay time
-				command_enable = true,
-				ui = {
-					title = "Signature Help",
-					-- border = "rounded",
-					winblend = 0,
-				},
-				keys = {
-					quit = "q",
-				},
-			},
-		})
-	end
+	event = "LspAttach",
+	config = config,
 }

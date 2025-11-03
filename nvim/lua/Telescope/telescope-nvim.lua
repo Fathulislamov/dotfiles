@@ -59,6 +59,7 @@ return {
 	"nvim-telescope/telescope.nvim",
 	tag = "0.1.x",
 	config = config,
+	event = "VeryLazy",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"sharkdp/fd",

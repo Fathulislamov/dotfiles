@@ -23,6 +23,7 @@ end
 return {
 	"nvim-neo-tree/neo-tree.nvim",
 	branch = "v3.x",
+	event = "BufEnter",
 	config = config,
 	dependencies = {
 		"nvim-lua/plenary.nvim",

@@ -51,5 +51,7 @@ local config = function()
 end
 return {
 	"onsails/lspkind.nvim",
+	-- event = { "BufReadPre", "BufNewFile" },
+	veryLazy = true,
 	config = config,
 }

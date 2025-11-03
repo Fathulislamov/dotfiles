@@ -28,5 +28,6 @@ end
 
 return {
 	"hrsh7th/cmp-buffer",
+	event = { "BufReadPre", "BufNewFile" },
 	config = config,
 }
