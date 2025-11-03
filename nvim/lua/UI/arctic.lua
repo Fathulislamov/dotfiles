@@ -1,7 +1,7 @@
 local function conf()
 	local cmd = vim.cmd
 	-- cmd("highlight NormalFloat guibg=#1e1e1e")
-	cmd("highlight WhichKeyNormal guibg=NvimDarkGrey1")
+	-- cmd("highlight WhichKeyNormal guibg=NvimDarkGrey1")
 	-- 	cmd("highlight NeoTreeFloatTitle guibg=#1e1e1e")
 	-- cmd("highlight LazyNormal guibg=NvimDarkGrey1")
 	-- 	cmd("highlight MasonNormal guibg=NvimDarkGrey1")
